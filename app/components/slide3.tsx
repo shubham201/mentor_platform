@@ -1,28 +1,38 @@
+import Image from "next/image";
+
 export default function Slide3(){
     return (
-        <div className="bg-[#e8edfb]">
-          <div className="flex justify-between px-44 py-14 space-x-48">
+        <div className="">
+          <div className="flex justify-between items-center px-44 py-14 space-x-48">
             <div>
-              <div className="text-2xl font-bold">Sample Heading 3</div>
-              <div className="text-xl py-4 font-medium">Sub-Title 3</div>
+              <div className="text-2xl font-bold">Comprehensive English Preparation Program</div>
+              <div className="text-xl py-4 font-medium">For Bank, Railways, and SSC Exams</div>
               <div className="max-w-[600px]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+              Our English Preparation Program for Bank, Railways, and SSC exams is expertly crafted to equip aspirants with the language 
+              skills and strategies needed to excel in competitive exams. The course covers key areas, including grammar, vocabulary, 
+              reading comprehension, verbal ability, and error detection, tailored to exam-specific requirements. With interactive lessons,
+               practice exercises, mock tests, and time-management tips, candidates gain the confidence and proficiency to tackle the English
+                section effectively and achieve their career aspirations.
               </div>
-              <div className="flex py-3 space-x-7">
-                <button className="bg-[#43438B] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
+              <div className="flex py-6 space-x-7">
+                <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
                   Book a Demo Class
                 </button>
-                <button className="bg-[#43438B] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
+                <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
                   Enroll Now
                 </button>
               </div>
             </div>
 
-            <div className="bg-[#F2F4FC] mt-5 w-[700px] h-[300px]"></div>
+            <Image 
+                                    src="/static/ssc1.svg"
+                                    alt=""
+                                    width={350} // Adjust width
+                                    height={300}// Adjust height
+                                    className="rounded-md mt-5"
+             />   
+
+            {/* <div className="bg-[#F2F4FC] mt-5 w-[700px] h-[300px]"></div> */}
           </div>
         </div>
     )

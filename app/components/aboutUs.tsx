@@ -15,7 +15,7 @@ export default function AboutUs() {
   const [index,setIndex]=useState(0);
 
   function handleNext(){      
-    if(index==2){
+    if(index==slidesArray.length -1){
       setIndex(0);
     }else{
       setIndex(index+1);
@@ -24,15 +24,15 @@ export default function AboutUs() {
 
   function handlePrev(){
     if(index==0){
-      setIndex(2);
+      setIndex(slidesArray.length -1);
     }else{
       setIndex(index-1);
     }
   }
 
   return (
-        <div className=" bg-[#e8edfb]">
-            <div className="flex items-center">
+        <div className="bg-[#e8edfb]">
+            <div className="flex justify-between items-center ">
               {/* left arrow */}
               <IoIosArrowBack onClick={handlePrev} className="size-16 text-[#D9D9D9] "/>
                       {slidesArray[index]}
