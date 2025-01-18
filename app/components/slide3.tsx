@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Buttons from "./buttons";
 
 export default function Slide3(){
     return (
@@ -14,14 +15,7 @@ export default function Slide3(){
                practice exercises, mock tests, and time-management tips, candidates gain the confidence and proficiency to tackle the English
                 section effectively and achieve their career aspirations.
               </div>
-              <div className="flex py-6 space-x-7">
-                <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
-                  Book a Demo Class
-                </button>
-                <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
-                  Enroll Now
-                </button>
-              </div>
+              <Buttons></Buttons>
             </div>
 
             <Image 

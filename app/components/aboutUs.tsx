@@ -36,11 +36,13 @@ export default function AboutUs() {
               {/* left arrow */}
               <IoIosArrowBack onClick={handlePrev} className="size-16 text-[#D9D9D9] "/>
                       {slidesArray[index]}
+
               {/* right arrow */}
               <IoIosArrowForward onClick={handleNext} className="size-16 text-[#D9D9D9] "/>
             </div>
-
+            
             <div className="flex justify-center space-x-5 pb-5" >
+              
               {slidesArray.map((_, i) => (
                 <div
                   key={i}

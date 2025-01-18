@@ -1,9 +1,7 @@
 import Image from "next/image";
+import Buttons from "./buttons";
 
 export default function Slide1(){
-  function democlass(){
-      alert("hello")
-  }
     return (
         <div className="bg-[#e8edfb] ">
           <div className="flex justify-between items-center px-44 py-14 space-x-48">
@@ -19,14 +17,15 @@ export default function Slide1(){
               and real-life problem-solving, students develop confidence, creativity, and critical thinking to excel academically and 
               beyond.
               </div>
-              <div className="flex py-6 space-x-7">
+              {/* <div className="flex py-6 space-x-7">
                 <button onClick={democlass} className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
                   Book a Demo Class
                 </button>
                 <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
                   Enroll Now
                 </button>
-              </div>
+              </div> */}
+              <Buttons></Buttons>
             </div>
              <Image 
                                             src="/static/colourful-math-numbers-letters-top-view.jpg"
