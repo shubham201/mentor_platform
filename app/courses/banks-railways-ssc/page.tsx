@@ -58,7 +58,7 @@ export default function BanksRailwaysSSC() {
         <div className="bg-yellow-400 py-12">
   <div className="max-w-6xl mx-auto text-center">
     <h1 className="text-3xl font-bold text-black mb-6">
-      Affordable CTET Coaching for Aspiring Teachers
+      Affordable English Coaching for Competitive Exam
     </h1>
     <div className="flex justify-center">
       {/* CTET Basic Plan Card */}

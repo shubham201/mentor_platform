@@ -13,10 +13,10 @@ export default function AboutUsPage(){
   
         <div className="bg-[#f2f4fc] pb-14  px-8 ">
           <div className="max-w-6xl mx-auto">
-            <p className="text-lg mb-4">
+          <p className="text-lg mb-4">
               At AtoInfinity Hub, we bridge the gap between aspiring students and expert mentors. Our platform offers a wide array of 
-              <strong> comprehensive courses</strong> designed to empower students with the skills they need to succeed in today’s fast-paced world. 
-              Whether you're looking to enhance your knowledge, prepare for your dream career, or explore new interests, our carefully curated 
+              <strong>comprehensive courses</strong> designed to empower students with the skills they need to succeed in today&apos;s fast-paced world. 
+              Whether you&apos;re looking to enhance your knowledge, prepare for your dream career, or explore new interests, our carefully curated 
               courses cater to learners of all levels.
             </p>
             <p className="text-lg mb-4">
@@ -53,7 +53,7 @@ export default function AboutUsPage(){
         </div>
 
       <p className="mt-10 text-lg text-center text-gray-700">
-        Whether you're a student eager to unlock your potential or a mentor looking to inspire and share knowledge, AtoInfinity Hub is where your journey begins. Join us today and take the first step toward a future of infinite possibilities!
+        Whether you&apos;re a student eager to unlock your potential or a mentor looking to inspire and share knowledge, AtoInfinity Hub is where your journey begins. Join us today and take the first step toward a future of infinite possibilities!
       </p>
     </div>
         

@@ -21,7 +21,7 @@ export default function Different() {
                 <h3 className="text-2xl font-bold mb-4">Expert Tutors</h3>
             </div>
                 <ul className="space-y-3 list-disc list-inside text-lg">
-                    <li>Tailored to every student's unique learning goals</li>
+                    <li>Tailored to every student&apos;s unique learning goals</li>
                     <li>Proven success with engaging teaching methods</li>
                     <li>Covers CBSE, ICSE, State Boards, and International Curricula</li>
                 </ul>

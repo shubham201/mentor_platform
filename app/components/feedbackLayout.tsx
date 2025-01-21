@@ -11,7 +11,7 @@ interface FeedbackInterface{
 export default function Feedback1( {feedback }: { feedback: FeedbackInterface }) {
 
   const renderStars = () => {
-    let stars = [];
+    const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (feedback.rating >= i) {
         stars.push(<FontAwesomeIcon key={i} icon={faStar} className="text-yellow-400" />);

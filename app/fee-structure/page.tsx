@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Navbar from "../components/navbar";
-import Link from "next/link";
 import Buttons from "../components/buttons";
 
 type CourseType = "English" | "Maths" | "CTET" | "Banks,Railways,SSC";

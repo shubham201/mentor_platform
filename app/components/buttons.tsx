@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { use, useState } from "react"
+import { useState } from "react"
 
 interface ButtonsProps {
     navigate: string;  

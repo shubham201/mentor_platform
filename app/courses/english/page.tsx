@@ -57,7 +57,7 @@ export default function English(){
     </div>
 
         <p className="mt-10 text-lg text-center text-gray-700">
-        If you're a student from KG to 10th grade looking to strengthen your English skills, AtoInfinity Hub is here to guide you. Start your journey with us today and lay the groundwork for a brighter future filled with endless opportunities!
+        If you&apos;re a student from KG to 10th grade looking to strengthen your English skills, AtoInfinity Hub is here to guide you. Start your journey with us today and lay the groundwork for a brighter future filled with endless opportunities!
         </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function English(){
         <div className="bg-yellow-400 py-12">
         <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-3xl font-bold text-black mb-6">
-            Affordable Math Tutoring for Your Child
+            Affordable English Tutoring for Your Child
             </h1>
             <div className="flex justify-center space-x-4 mb-8">
             {/* <button

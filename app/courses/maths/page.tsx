@@ -58,7 +58,7 @@ export default function English(){
   </div>
 </div>
         <p className="mt-10 text-lg text-center text-gray-700">
-        If you're a student from KG to 10th grade looking to strengthen your Maths skills, AtoInfinity Hub is here to guide you. Start your journey with us today and lay the groundwork for a brighter future filled with endless opportunities!
+        If you&apos;re a student from KG to 10th grade looking to strengthen your Maths skills, AtoInfinity Hub is here to guide you. Start your journey with us today and lay the groundwork for a brighter future filled with endless opportunities!
         </p>
         </div>
 

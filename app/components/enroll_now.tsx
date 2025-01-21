@@ -2,8 +2,6 @@
 import { useState } from "react";
 
 export default function EnrollNow(){
-
-    const [isModalOpen,setIsModalOpen]=useState(false);
             const courses=["English","Maths","CTET","Banks,Railways,SSC"];
             const grades = ["KG", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"]; 
             const [selectedCourse,setSelectedCourse]=useState("");
@@ -16,14 +14,6 @@ export default function EnrollNow(){
                 setSelectedGrade("");
                 setEmail("");
                 setName("");
-            }
-        
-            function closeform(){
-                setSelectedCourse("");
-                setSelectedGrade("");
-                setEmail("");
-                setName("");
-                setIsModalOpen(false);
             }
 
     return (
