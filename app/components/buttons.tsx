@@ -16,7 +16,6 @@ export default function Buttons({ navigate }: ButtonsProps){
     const [selectedGrade,setSelectedGrade]=useState("");
     const [email,setEmail]=useState("");
     const [name,setName]=useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
 
     function handlesubmit(){
         setSelectedCourse("");
@@ -128,9 +127,9 @@ export default function Buttons({ navigate }: ButtonsProps){
                         <button
                             type="submit"
                             className="w-full bg-[#43438B] hover:bg-[#7070c5] text-white py-2 rounded-md font-medium"
-                            disabled={isSubmitting}
+                           
                         >
-                             {isSubmitting ? "Submitting..." : "Submit"}
+                             Submit
                         </button>
                         </form>
                     </div>

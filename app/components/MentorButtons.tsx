@@ -5,7 +5,6 @@ export default function MentorButtons(){
     const [isModalOpen,setIsModalOpen]=useState(false);
     const [email,setEmail]=useState("");
     const [name,setName]=useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
 
     function handlesubmit(){
         setEmail("");
@@ -67,9 +66,9 @@ export default function MentorButtons(){
                                 <button
                                     type="submit"
                                     className="w-full bg-[#43438B] hover:bg-[#7070c5] text-white py-2 rounded-md font-medium"
-                                    disabled={isSubmitting}
+                                    
                                 >
-                                    {isSubmitting ? "Submitting..." : "Submit"}
+                                   Submit
                                 </button>
                             </form>
                         </div>
