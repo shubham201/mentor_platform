@@ -6,25 +6,25 @@ export default function Slide3(){
         <div className="">
           <div className="flex justify-between items-center px-44 py-14 space-x-48">
             <div>
-              <div className="text-2xl font-bold">Comprehensive English Preparation Program</div>
-              <div className="text-xl py-4 font-medium">For Bank, Railways, and SSC Exams</div>
+              <div className="text-2xl font-bold">Comprehensive CTET Preparation Program</div>
+              <div className="text-xl py-4 font-medium">For Aspiring Teachers</div>
               <div className="max-w-[600px]">
-              Our English Preparation Program for Bank, Railways, and SSC exams is expertly crafted to equip aspirants with the language 
-              skills and strategies needed to excel in competitive exams. The course covers key areas, including grammar, vocabulary, 
-              reading comprehension, verbal ability, and error detection, tailored to exam-specific requirements. With interactive lessons,
-               practice exercises, mock tests, and time-management tips, candidates gain the confidence and proficiency to tackle the English
-                section effectively and achieve their career aspirations.
+              Our CTET Preparation Program is meticulously designed to help aspiring teachers build a strong foundation and excel in
+               the Central Teacher Eligibility Test (CTET). The course covers all essential topics, including child pedagogy, teaching
+                methodologies, subject-specific content, and assessment strategies. With detailed study material, interactive sessions,
+                 practice tests, and real-world teaching scenarios, candidates develop the confidence, expertise, and critical understanding 
+                 required to succeed in the exam and embark on a rewarding teaching career.
               </div>
-              <Buttons></Buttons>
+             <Buttons navigate="ctet" ></Buttons>
             </div>
 
             <Image 
-                                    src="/static/ssc1.svg"
-                                    alt=""
-                                    width={350} // Adjust width
-                                    height={300}// Adjust height
-                                    className="rounded-md mt-5"
-             />   
+                        src="/static/ctet.svg"
+                        alt=""
+                        width={500} // Adjust width
+                        height={300}// Adjust height
+                        className="rounded-md mt-5"
+              />            
 
             {/* <div className="bg-[#F2F4FC] mt-5 w-[700px] h-[300px]"></div> */}
           </div>

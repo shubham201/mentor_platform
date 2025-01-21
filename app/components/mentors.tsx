@@ -1,6 +1,7 @@
+import MentorButtons from "./MentorButtons"
 export default function Mentors(){
     return (
-        <div className="  ">
+        <div id="become-mentor" className="  ">
              <div className="text-2xl pt-3  font-bold text-center" >Our Mentors</div>
              <div className="text-xl pt-3  font-medium text-center" >Subtitle </div>
              <div className="px-10 flex justify-between">
@@ -44,11 +45,7 @@ export default function Mentors(){
                     <div className="text-center pt-2 font-medium" >Details S5</div>
                 </div>
             </div>
-
-            <div className="flex justify-center py-10 space-x-10">
-                        <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">Read More</button>
-                        <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">Become a Mentor</button>
-            </div>
+            <MentorButtons></MentorButtons>
         </div>
     )
 }

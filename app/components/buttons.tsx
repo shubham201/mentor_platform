@@ -1,8 +1,13 @@
 "use client"
 
+import Link from "next/link";
 import { use, useState } from "react"
 
-export default function Buttons(){
+interface ButtonsProps {
+    navigate: string;  
+  }
+
+export default function Buttons({ navigate }: ButtonsProps){
 
     const [isModalOpen,setIsModalOpen]=useState(false);
     const courses=["English","Maths","CTET","Banks,Railways,SSC"];
@@ -34,9 +39,9 @@ export default function Buttons(){
                 <button  onClick={()=>setIsModalOpen(true)} className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
                   Book a Demo Class
                 </button>
-                <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
+                <Link href={`/courses/${navigate}`} className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
                   Enroll Now
-                </button>
+                </Link>
               </div>
 
             {

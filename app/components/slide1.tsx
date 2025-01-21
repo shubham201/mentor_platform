@@ -6,26 +6,19 @@ export default function Slide1(){
         <div className="bg-[#e8edfb] ">
           <div className="flex justify-between items-center px-44 py-14 space-x-48">
             <div>
-              <div className="text-2xl font-bold">Comprehensive English and Math Program
+              <div className="text-2xl font-bold">Comprehensive Math Program
               </div>
               <div className="text-xl py-4 font-medium">For Students from KG to 10th Grade
               </div>
               <div className="max-w-[600px]">
-              Our English and Math program is designed to provide a strong foundation and continuous growth for students from 
-              kindergarten to 10th grade. The course focuses on age-appropriate skills, from learning alphabets and basic numbers 
-              to mastering advanced grammar, literature, and mathematical concepts. With interactive lessons, practical exercises, 
-              and real-life problem-solving, students develop confidence, creativity, and critical thinking to excel academically and 
-              beyond.
+              Our Math program is crafted to build a solid foundation and promote continuous growth for students from
+               kindergarten to 10th grade. It begins with the basics of numbers, counting, and simple arithmetic and progresses to
+               advanced concepts like algebra, geometry, and data analysis. Through interactive lessons, hands-on exercises, and 
+               real-world problem-solving, students gain a deep understanding of mathematical principles. The program encourages 
+               logical reasoning, critical thinking, and practical application, ensuring students excel academically and develop 
+               the confidence to solve challenges in everyday life.
               </div>
-              {/* <div className="flex py-6 space-x-7">
-                <button onClick={democlass} className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
-                  Book a Demo Class
-                </button>
-                <button className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center">
-                  Enroll Now
-                </button>
-              </div> */}
-              <Buttons></Buttons>
+              <Buttons navigate="maths" ></Buttons>
             </div>
              <Image 
                                             src="/static/colourful-math-numbers-letters-top-view.jpg"
@@ -34,7 +27,6 @@ export default function Slide1(){
                                             height={300}// Adjust height
                                             className="rounded-md mt-5"
             />
-            {/* <div className="bg-[#F2F4FC] mt-5 w-[700px] h-[300px]"></div> */}
           </div>
         </div>
     )

@@ -2,15 +2,16 @@
 import { useState } from "react";
 import Slide1 from "./slide1";
 import Slide2 from "./slide2";
-import SLide3 from "./slide3"
+import Slide3 from "./slide3";
+import SLide4 from "./slide4"
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import Slide3 from "./slide3";
 
 export default function AboutUs() {
   const slidesArray=[<Slide1 key="1" />,
                       <Slide2 key="2" />,
-                      <SLide3 key="3"/>
+                      <Slide3 key="3" />,
+                      <SLide4 key="4"/>
   ]
   const [index,setIndex]=useState(0);
 
@@ -31,7 +32,7 @@ export default function AboutUs() {
   }
 
   return (
-        <div className="bg-[#e8edfb]">
+        <div id="courses-overview" className="bg-[#e8edfb]">
             <div className="flex justify-between items-center ">
               {/* left arrow */}
               <IoIosArrowBack onClick={handlePrev} className="size-16 text-[#D9D9D9] "/>

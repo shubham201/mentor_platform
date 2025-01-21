@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar";
-import AboutUs from "./components/aboutUs";
+import AboutUs from "./components/courses_overview";
 import Feedback from "./components/feedback";
 import Mentors from "./components/mentors";
 import Footer from "./components/footer";
