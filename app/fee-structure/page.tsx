@@ -3,76 +3,97 @@ import { useState } from "react";
 import Navbar from "../components/navbar";
 import Buttons from "../components/buttons";
 
-type CourseType = "English" | "Maths" | "CTET" | "Banks,Railways,SSC";
+type CourseType = "English" | "Maths" | "Science" | "CTET" | "Banks,Railways,SSC";
 
 export default function FeeStructure() {
   const [course, setCourse] = useState<CourseType>("English");
 
-  const feeData: Record<CourseType, { 
-    title: string; 
-    discount: string; 
-    price: string; 
-    originalPrice: string; 
-    annualPrice: string; 
-    duration: string; 
-    }[]> = {
+  const feeData: Record<
+    CourseType,
+    {
+      title: string;
+      discount: string;
+      price: string;
+      originalPrice: string;
+      annualPrice: string;
+      duration: string;
+    }[]
+  > = {
     English: [
-        {
+      {
         title: "Kg to Class 5",
         discount: "13.5% OFF",
         price: "₹541/class",
         originalPrice: "₹626",
         annualPrice: "₹525/class for 12 months (96 classes)",
         duration: "6 months, 48 classes",
-        },
-        {
+      },
+      {
         title: "Class 6 to Class 10",
         discount: "5% OFF",
         price: "₹788/class",
         originalPrice: "₹829",
         annualPrice: "₹750/class for 12 months (96 classes)",
         duration: "6 months, 48 classes",
-        },
+      },
     ],
     Maths: [
-        {
+      {
         title: "Kg to Class 5",
         discount: "10% OFF",
         price: "₹500/class",
         originalPrice: "₹556",
         annualPrice: "₹480/class for 12 months (96 classes)",
         duration: "6 months, 48 classes",
-        },
-        {
+      },
+      {
         title: "Class 6 to Class 10",
         discount: "8% OFF",
         price: "₹700/class",
         originalPrice: "₹760",
         annualPrice: "₹680/class for 12 months (96 classes)",
         duration: "6 months, 48 classes",
-        },
+      },
+    ],
+    Science: [
+      {
+        title: "Kg to Class 5",
+        discount: "12% OFF",
+        price: "₹530/class",
+        originalPrice: "₹602",
+        annualPrice: "₹510/class for 12 months (96 classes)",
+        duration: "6 months, 48 classes",
+      },
+      {
+        title: "Class 6 to Class 10",
+        discount: "7% OFF",
+        price: "₹720/class",
+        originalPrice: "₹774",
+        annualPrice: "₹700/class for 12 months (96 classes)",
+        duration: "6 months, 48 classes",
+      },
     ],
     CTET: [
-        {
+      {
         title: "CTET Basic",
         discount: "15% OFF",
         price: "₹600/class",
         originalPrice: "₹705",
         annualPrice: "₹580/class for 12 months (96 classes)",
         duration: "6 months, 48 classes",
-        },
+      },
     ],
     "Banks,Railways,SSC": [
-        {
+      {
         title: "Competitive Exams",
         discount: "20% OFF",
         price: "₹850/class",
         originalPrice: "₹1062",
         annualPrice: "₹800/class for 12 months (96 classes)",
         duration: "6 months, 48 classes",
-        },
+      },
     ],
-    };
+  };
 
   return (
     <div id="fee_structure" className="h-screen flex flex-col">
