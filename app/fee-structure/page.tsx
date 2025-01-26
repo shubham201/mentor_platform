@@ -102,7 +102,7 @@ export default function FeeStructure() {
         <h1 className="text-4xl font-bold text-black mb-8 text-center">
           Affordable {course} Tutoring for Your Child
         </h1>
-        <div className="flex justify-center space-x-4 mb-10">
+        <div className="flex justify-center space-x-4 mb-10 flex-wrap">
           {(Object.keys(feeData) as CourseType[]).map((item) => (
             <button
               key={item}
@@ -117,7 +117,7 @@ export default function FeeStructure() {
             </button>
           ))}
         </div>
-        <div className="flex flex-col items-center w-full space-y-6">
+        <div className="flex flex-col items-center w-full space-y-6 sm:space-y-4 md:space-y-6">
           {feeData[course].map((fee, index) => (
             <div
               key={index}
@@ -141,7 +141,7 @@ export default function FeeStructure() {
         
         <Buttons navigate={`${course.replace(/,/g, "-").toLowerCase()}`} ></Buttons>
         
-        <div className="flex justify-center mt-16 space-x-10">
+        <div className="flex justify-center mt-16 space-x-10 flex-wrap">
           <div className="text-center">
             <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
               🗓️
@@ -169,3 +169,4 @@ export default function FeeStructure() {
     </div>
   );
 }
+

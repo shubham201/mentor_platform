@@ -1,33 +1,66 @@
-export default function Footer(){
-    return (
-        <div className="bg-[#43438b] py-5 px-10">
-            <div className="flex justify-between text-white font-light">
-                <div className="flex space-x-10">
-                    <div>
-                        <a href="#navbar" className="block">Home</a>
-                        <a href="/about-us" className="block pt-1">About Us</a>
-                        <a href="#feedback" className="block pt-1">Feedback</a>
-                        <a href="#courses-overview" className="block pt-1">Courses</a>
-                    </div>
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-                    <div>
-                        <a href="#courses-overview" className="block pt-1">Join as Student</a>
-                        <a href="#become-mentor" className="block pt-1">Become a Mentor</a>
-                        <a href="#courses-overview" className="block pt-1">Apply for Free demo class</a>
-                        <a href="/fee-structure" className="block pt-1">Fee structure</a>
-                    </div>
-                </div>
+export default function Footer() {
+  return (
+    <div className="bg-[#43438b] text-white py-10 px-6 md:px-16">
+      {/* Footer container */}
+      <div className="grid grid-cols-1 md:flex md:justify-between gap-6 md:gap-0">
+        {/* Links Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Column 1 */}
+          <div>
+            <ul className="space-y-2">
+              <li><Link href="#navbar">Home</Link></li>
+              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="#feedback">Feedback</Link></li>
+              <li><Link href="#courses-overview">Courses</Link></li>
+            </ul>
+          </div>
 
-                <div className="flex space-x-10">
-                    <div>
-                        <div>Contact Us</div>
-                        <div className="pt-2">abc@gmail.com</div>
-                        <div className="pt-1">9xxxxxxxxx</div>
-                        <div className="pt-1">9xxxxxxxxx</div>
-                    </div>
-                    <div className="bg-[#F2F4FC] py-8 w-[100px] h-[100px] rounded-full"></div>
-                </div>
-            </div>
+          {/* Column 2 */}
+          <div>
+            <ul className="space-y-2">
+              <li><Link href="#courses-overview">Join as Student</Link></li>
+              <li><Link href="#become-mentor">Become a Mentor</Link></li>
+              <li><Link href="#courses-overview">Apply for Free Demo Class</Link></li>
+              <li><Link href="/fee-structure">Fee Structure</Link></li>
+            </ul>
+          </div>
         </div>
-    );
+
+        {/* Contact Section */}
+        <div className="flex flex-col items-start space-y-4 md:space-y-2 md:mr-4">
+          <h4 className="font-semibold text-lg">Contact Us</h4>
+          <p className="text-sm">Email: <Link href="mailto:abc@gmail.com">abc@gmail.com</Link></p>
+          <p className="text-sm">Phone: <Link href="tel:9xxxxxxxxx">9xxxxxxxxx</Link></p>
+          <p className="text-sm">Support: <Link href="tel:9xxxxxxxxx">9xxxxxxxxx</Link></p>
+        </div>
+
+        {/* Logo Section */}
+        <div className="flex justify-center md:justify-end">
+          <div className="bg-[#F2F4FC] w-[120px] h-[120px] rounded-full"></div>
+        </div>
+      </div>
+
+      {/* Social Media Icons */}
+      <div className="mt-6 flex justify-center space-x-6">
+        <Link href="https://google.com" passHref>
+          <FontAwesomeIcon icon={faLinkedin} className="text-xl hover:text-gray-300" />
+        </Link>
+        <Link href="https://google.com" passHref>
+          <FontAwesomeIcon icon={faTwitter} className="text-xl hover:text-gray-300" />
+        </Link>
+        <Link href="https://google.com" passHref>
+          <FontAwesomeIcon icon={faInstagram} className="text-xl hover:text-gray-300" />
+        </Link>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="mt-10 text-center text-sm text-gray-300">
+        © {new Date().getFullYear()} Your Company Name. All Rights Reserved.
+      </div>
+    </div>
+  );
 }
