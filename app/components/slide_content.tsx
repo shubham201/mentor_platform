@@ -6,7 +6,8 @@ const sharedContainerStyles =
 const sharedContentStyles =
   "flex flex-col lg:flex-row items-center lg:items-start justify-center w-full max-w-7xl space-y-6 lg:space-y-0 lg:space-x-12";
 
-const imageStyles = "w-[600px] h-[400px] object-cover"; // Uniform image size
+  const imageStyles =
+  "object-cover w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[350px] lg:w-[600px] lg:h-[400px]";
 
 export function Slide1() {
   return (

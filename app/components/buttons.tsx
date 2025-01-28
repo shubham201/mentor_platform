@@ -28,7 +28,6 @@ export default function Buttons({ navigate }: ButtonsProps) {
     console.log("Contact:", contact);
     console.log("Address:", address);
 
-    // Clear all form data
     setSelectedCourses([]);
     setSelectedGrade("");
     setEmail("");
@@ -59,14 +58,12 @@ export default function Buttons({ navigate }: ButtonsProps) {
   const modalContent = (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
       <div className="bg-white rounded-lg p-6 shadow-lg relative max-w-[500px] w-full">
-        {/* Close Button */}
         <button
           onClick={closeForm}
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
         >
           &#x2715;
         </button>
-        {/* Modal Content */}
         <h2 className="text-2xl font-bold text-center mb-4">Book a Demo Class</h2>
         <p className="text-center text-gray-600 mb-6">
           Fill in your details to schedule a demo class with us.
@@ -102,7 +99,6 @@ export default function Buttons({ navigate }: ButtonsProps) {
             required
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#43438B]"
           />
-          {/* Select Courses */}
           <div>
             <h3 className="text-lg font-medium mb-2">Select Courses:</h3>
             <div className="flex items-center overflow-x-auto space-x-6 whitespace-nowrap">
@@ -123,8 +119,6 @@ export default function Buttons({ navigate }: ButtonsProps) {
               ))}
             </div>
           </div>
-
-          {/* Select Grade */}
           {(selectedCourses.includes("English") ||
             selectedCourses.includes("Maths") ||
             selectedCourses.includes("Science")) && (
@@ -147,7 +141,6 @@ export default function Buttons({ navigate }: ButtonsProps) {
               </select>
             </div>
           )}
-
           <button
             type="submit"
             className="w-full bg-[#43438B] hover:bg-[#7070c5] text-white py-2 rounded-md font-medium"
@@ -161,22 +154,21 @@ export default function Buttons({ navigate }: ButtonsProps) {
 
   return (
     <div>
-      <div className="flex py-6 space-x-7">
+      <div className="flex py-6 space-x-3">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center"
+          className="flex-grow basis-1/2 bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex items-center justify-center"
         >
           Book a Demo Class
         </button>
         <Link
           href={`/courses/${navigate}`}
-          className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center"
+          className="flex-grow basis-1/2 bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex items-center justify-center"
         >
           Enroll Now
         </Link>
       </div>
 
-      {/* Render Modal via React Portal */}
       {isModalOpen && createPortal(modalContent, document.body)}
     </div>
   );

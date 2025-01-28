@@ -31,20 +31,21 @@ export default function MentorButtons() {
 
   return (
     <div>
-      <div className="flex justify-center py-10 space-x-10">
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center"
-        >
-          Become a Mentor
-        </button>
-        <Link
-          href="/mentor"
-          className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow max-w-[200px] flex items-center justify-center"
-        >
-          Read More
-        </Link>
-      </div>
+        <div className="flex flex-wrap justify-center py-10 gap-8">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow flex-shrink-0 max-w-[200px] w-full sm:w-auto flex items-center justify-center"
+          >
+            Become a Mentor
+          </button>
+          <Link
+            href="/mentor"
+            className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow flex-shrink-0 max-w-[200px] w-full sm:w-auto flex items-center justify-center"
+          >
+            Read More
+          </Link>
+          </div>
+
 
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
@@ -125,3 +126,4 @@ export default function MentorButtons() {
     </div>
   );
 }
+
