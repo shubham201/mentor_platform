@@ -66,7 +66,7 @@ export default function Science() {
             <div className="bg-yellow-400 py-10 px-4 sm:px-8">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-xl sm:text-3xl font-bold text-black mb-6">
-              Affordable English Tutoring for Your Child
+              Affordable Science Tutoring for Your Child
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-white rounded-lg shadow-md p-6 text-left">
