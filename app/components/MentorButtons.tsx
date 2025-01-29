@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function MentorButtons() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,7 +11,6 @@ export default function MentorButtons() {
 
   function handlesubmit(event: React.FormEvent) {
     event.preventDefault();
-    // Handle form submission logic (e.g., send data to an API)
     setEmail("");
     setName("");
     setContact("");
@@ -31,19 +29,13 @@ export default function MentorButtons() {
 
   return (
     <div>
-        <div className="flex flex-wrap justify-center py-10 gap-8">
+        <div className="flex  justify-center py-10 gap-8">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow flex-shrink-0 max-w-[200px] w-full sm:w-auto flex items-center justify-center"
+            className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-5 text-white font-medium rounded-md  max-w-[200px] w-full sm:w-auto flex items-center justify-center"
           >
             Become a Mentor
           </button>
-          <Link
-            href="/mentor"
-            className="bg-[#43438B] hover:bg-[#7070c5] px-4 py-2 text-white font-medium rounded-md flex-grow flex-shrink-0 max-w-[200px] w-full sm:w-auto flex items-center justify-center"
-          >
-            Read More
-          </Link>
           </div>
 
 

@@ -24,6 +24,7 @@ export default function Navbar() {
           <Link href="/">Home</Link>
           <Link href="/about-us">About Us</Link>
           <CoursesDropdown />
+          <Link href="mentor" >Become a Mentor</Link>
           <Link href="/fee-structure">Fee Structure</Link>
         </div>
 
@@ -64,6 +65,7 @@ export default function Navbar() {
             About Us
           </Link>
           <CoursesDropdown />
+          <Link href="/mentor" onClick={toggleSidebar} >Become a Mentor</Link>
           <Link href="/fee-structure" onClick={toggleSidebar}>
             Fee Structure
           </Link>

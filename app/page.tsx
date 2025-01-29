@@ -11,7 +11,7 @@ export default function Home() {
       <AboutUs></AboutUs>
       <Different></Different>
       <Feedback></Feedback>
-      <Mentors></Mentors>
+      {/* <Mentors></Mentors> */}
       <Footer></Footer>
     </div>
   );
