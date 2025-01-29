@@ -1,7 +1,6 @@
 import Navbar from "./components/navbar";
 import AboutUs from "./components/courses_overview";
 import Feedback from "./components/feedback";
-import Mentors from "./components/mentors";
 import Footer from "./components/footer";
 import Different from "./components/different";
 export default function Home() {
