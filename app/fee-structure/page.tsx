@@ -141,30 +141,32 @@ export default function FeeStructure() {
         
         <Buttons navigate={`${course.replace(/,/g, "-").toLowerCase()}`} ></Buttons>
         
-        <div className="flex justify-center mt-16 space-x-10 flex-wrap">
-          <div className="text-center">
-            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-              🗓️
-            </div>
-            <p className="text-sm text-gray-800 font-semibold">
-              Flexible Leaves
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-              🕒
-            </div>
-            <p className="text-sm text-gray-800 font-semibold">
-              Adjustable Schedule
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-              🔄
-            </div>
-            <p className="text-sm text-gray-800 font-semibold">Easy Refunds</p>
-          </div>
-        </div>
+        <div className="flex justify-center mt-16 space-x-4 sm:space-x-6 md:space-x-10">
+  <div className="text-center">
+    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+      🗓️
+    </div>
+    <p className="text-sm text-gray-800 font-semibold">
+      Flexible Leaves
+    </p>
+  </div>
+  <div className="text-center">
+    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+      🕒
+    </div>
+    <p className="text-sm text-gray-800 font-semibold">
+      Adjustable Schedule
+    </p>
+  </div>
+  <div className="text-center">
+    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+      🔄
+    </div>
+    <p className="text-sm text-gray-800 font-semibold">Easy Refunds</p>
+  </div>
+</div>
+
+
       </div>
     </div>
   );
