@@ -96,7 +96,7 @@ export default function FeeStructure() {
   };
 
   return (
-    <div id="fee_structure" className="h-screen flex flex-col bg-gradient-to-r from-indigo-100 to-blue-200">
+    <div id="fee_structure" className="min-h-screen flex flex-col bg-gradient-to-r from-indigo-100 to-blue-200">
       <Navbar />
       <div className="flex flex-col items-center justify-center flex-grow px-4 py-10">
         <h1 className="text-4xl font-bold text-black mb-8 text-center">
@@ -107,7 +107,7 @@ export default function FeeStructure() {
             <button
               key={item}
               onClick={() => setCourse(item)}
-              className={`px-6 py-3 font-semibold rounded-full transition duration-200 ${
+              className={`px-6 py-3 my-3 font-semibold rounded-full transition duration-200 ${
                 course === item
                   ? "bg-black text-white"
                   : "bg-white text-black hover:bg-gray-200"
