@@ -59,7 +59,7 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="mt-10 text-center text-sm text-gray-300">
-        © {new Date().getFullYear()} Your Company Name. All Rights Reserved.
+        © {new Date().getFullYear()} AtoInfinity Hub. All Rights Reserved.
       </div>
     </div>
   );

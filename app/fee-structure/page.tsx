@@ -96,9 +96,9 @@ export default function FeeStructure() {
   };
 
   return (
-    <div id="fee_structure" className="h-screen flex flex-col">
+    <div id="fee_structure" className="h-screen flex flex-col bg-gradient-to-r from-indigo-100 to-blue-200">
       <Navbar />
-      <div className="flex flex-col items-center justify-center flex-grow px-4">
+      <div className="flex flex-col items-center justify-center flex-grow px-4 py-10">
         <h1 className="text-4xl font-bold text-black mb-8 text-center">
           Affordable {course} Tutoring for Your Child
         </h1>
@@ -121,7 +121,7 @@ export default function FeeStructure() {
           {feeData[course].map((fee, index) => (
             <div
               key={index}
-              className="max-w-md w-full bg-[#e8edfb] rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 p-6"
+              className="max-w-md w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 p-6"
             >
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-bold text-gray-800">{fee.title}</h2>

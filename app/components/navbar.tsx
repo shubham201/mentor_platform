@@ -24,7 +24,7 @@ export default function Navbar() {
           <Link href="/">Home</Link>
           <Link href="/about-us">About Us</Link>
           <CoursesDropdown />
-          <Link href="mentor" >Become a Mentor</Link>
+          <Link href="mentor" >Mentors</Link>
           <Link href="/fee-structure">Fee Structure</Link>
         </div>
 

@@ -1,13 +1,11 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Feedback1 from "./feedbackLayout";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // New icons
 
 const feedbackData = [
   {
@@ -28,36 +26,97 @@ const feedbackData = [
     title: "Parent of a 3rd Grader",
     rating: 5,
   },
+  {
+    content: "Amazing curriculum and great support!",
+    name: "Sarah Johnson",
+    title: "Parent of a 2nd Grader",
+    rating: 4.5,
+  },
 ];
 
 export default function Feedback() {
-  return (
-    <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-4">
-      <div className="text-2xl pt-3 font-bold text-center">Feedback From Parents</div>
-      <div className="text-xl pt-3 font-medium text-center">Subtitle</div>
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
-      <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
-        loop={false}
-        centeredSlides={true}
-        slidesPerView={3}
-        spaceBetween={30}
-        className="swiper-container"
-        breakpoints={{
-          // Add responsiveness
-          320: { slidesPerView: 1 }, // For mobile screens
-          640: { slidesPerView: 2 }, // For small tablets
-          1024: { slidesPerView: 3 }, // For desktops
-        }}
-      >
-        {feedbackData.map((feedback, index) => (
-          <SwiperSlide key={index}>
-            <Feedback1 feedback={feedback} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+      setIsTablet(width >= 768 && width < 1024);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative">
+      <div className="text-2xl pt-3 font-bold text-center">Feedback From Parents</div>
+      <div className="text-xl pt-2 font-medium text-center">Subtitle</div>
+
+      <div className="relative px-4 max-w-5xl mx-auto">
+        {/* Left Arrow */}
+        <button
+          onClick={() => setCurrentSlide((prev) => Math.max(prev - 1, 0))}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 
+                     bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
+                     flex items-center justify-center w-12 h-12 
+                     md:left-[-80px] md:w-14 md:h-14 
+                     lg:left-[-100px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
+        >
+          <ChevronLeft size={28} />
+        </button>
+
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          showArrows={false} // Hide default arrows
+          infiniteLoop
+          emulateTouch
+          autoPlay
+          interval={3000}
+          stopOnHover
+          selectedItem={currentSlide}
+          onChange={setCurrentSlide}
+          centerMode
+          centerSlidePercentage={isMobile ? 100 : isTablet ? 60 : 47} // Adjusted for tablet layout
+          renderIndicator={(onClickHandler, isSelected, index) => (
+            <li
+              className={`w-3 h-3 mx-1 rounded-full inline-block cursor-pointer ${
+                isSelected ? "bg-blue-600" : "bg-gray-300"
+              }`}
+              onClick={onClickHandler}
+              key={index}
+            />
+          )}
+        >
+          {feedbackData.map((feedback, index) => (
+            <motion.div
+              key={index}
+              className="p-6 transition-all duration-500 relative"
+              initial={{ scale: index === currentSlide ? 1 : 0.85, opacity: index === currentSlide ? 1 : 0.6 }}
+              animate={{ scale: index === currentSlide ? 1 : 0.85, opacity: index === currentSlide ? 1 : 0.6 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Feedback1 feedback={feedback} />
+            </motion.div>
+          ))}
+        </Carousel>
+
+        {/* Right Arrow */}
+        <button
+          onClick={() => setCurrentSlide((prev) => Math.min(prev + 1, feedbackData.length - 1))}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 
+                     bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
+                     flex items-center justify-center w-12 h-12 
+                     md:right-[-80px] md:w-14 md:h-14 
+                     lg:right-[-100px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
+        >
+          <ChevronRight size={28} />
+        </button>
+      </div>
     </div>
   );
 }
