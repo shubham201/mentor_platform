@@ -52,22 +52,22 @@ export default function Feedback() {
   }, []);
 
   return (
-    <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative">
+    <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative w-screen">
       <div className="text-2xl pt-3 font-bold text-center">Feedback From Parents</div>
       <div className="text-xl pt-2 font-medium text-center">Subtitle</div>
-
-      <div className="relative px-4 max-w-5xl mx-auto">
-        {/* Left Arrow */}
-        <button
-          onClick={() => setCurrentSlide((prev) => Math.max(prev - 1, 0))}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 
+      <button
+        onClick={() => setCurrentSlide((prev) => Math.max(prev - 1, 0))}
+        className="absolute left-4 top-[60%] transform -translate-y-1/2 
                      bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
                      flex items-center justify-center w-12 h-12 
-                     md:left-[-80px] md:w-14 md:h-14 
-                     lg:left-[-100px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
-        >
-          <ChevronLeft size={28} />
-        </button>
+                     md:left-[50px] md:w-14 md:h-14 
+                     lg:left-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
+      >
+        <ChevronLeft size={28} />
+      </button>
+      <div className="relative px-4 max-w-5xl mx-auto">
+        {/* Left Arrow */}
+
 
         <Carousel
           showThumbs={false}
@@ -84,9 +84,8 @@ export default function Feedback() {
           centerSlidePercentage={isMobile ? 100 : isTablet ? 60 : 47} // Adjusted for tablet layout
           renderIndicator={(onClickHandler, isSelected, index) => (
             <li
-              className={`w-3 h-3 mx-1 rounded-full inline-block cursor-pointer ${
-                isSelected ? "bg-blue-600" : "bg-gray-300"
-              }`}
+              className={`w-3 h-3 mx-1 rounded-full inline-block cursor-pointer ${isSelected ? "bg-blue-600" : "bg-gray-300"
+                }`}
               onClick={onClickHandler}
               key={index}
             />
@@ -106,17 +105,18 @@ export default function Feedback() {
         </Carousel>
 
         {/* Right Arrow */}
-        <button
-          onClick={() => setCurrentSlide((prev) => Math.min(prev + 1, feedbackData.length - 1))}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 
+
+      </div>
+      <button
+        onClick={() => setCurrentSlide((prev) => Math.min(prev + 1, feedbackData.length - 1))}
+        className="absolute right-4 top-[60%] transform -translate-y-1/2 
                      bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
                      flex items-center justify-center w-12 h-12 
-                     md:right-[-80px] md:w-14 md:h-14 
-                     lg:right-[-100px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
-        >
-          <ChevronRight size={28} />
-        </button>
-      </div>
+                     md:right-[50px] md:w-14 md:h-14 
+                     lg:right-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
+      >
+        <ChevronRight size={28} />
+      </button>
     </div>
   );
 }

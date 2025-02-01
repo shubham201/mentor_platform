@@ -7,9 +7,9 @@ export default function Different() {
             <div className="text-center text-3xl font-extrabold">Why AtoInfinity Hub?</div>
 
             {/* Grid Layout */}
-            <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+            <div className=" flex-wrap gap-10 flex justify-center">
                 {/* Expert Tutors */}
-                <div className="bg-blue-100 p-8 rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
+                <div className="bg-blue-100 p-8 w-[550px] rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
                     <div className="flex flex-col items-center space-y-4">
                         <Image
                             src="/static/online-teaching.png"
@@ -28,7 +28,7 @@ export default function Different() {
                 </div>
 
                 {/* English & Maths Courses */}
-                <div className="bg-green-100 p-8 rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
+                <div className="bg-green-100 p-8 w-[550px] rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
                     <div className="flex flex-col items-center space-y-4">
                         <Image
                             src="/static/elearning.png"
@@ -48,7 +48,7 @@ export default function Different() {
                 </div>
 
                 {/* Competitive Exam Prep */}
-                <div className="bg-yellow-100 p-8 rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
+                <div className="bg-yellow-100 p-8 w-[550px] rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
                     <div className="flex flex-col items-center space-y-4">
                         <Image
                             src="/static/test.png"
@@ -65,9 +65,10 @@ export default function Different() {
                     </ul>
                 </div>
 
-                {/* Wrapper for the last two tiles */}
-                <div className="lg:col-span-3 flex flex-col lg:flex-row lg:justify-center gap-10">
+
+                <div className="lg:col-span-3 flex w-[550px] flex-col  lg:justify-center gap-10">
                     {/* 1-to-1 Live Tutoring */}
+
                     <div className="bg-purple-100 p-8 rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
                         <div className="flex flex-col items-center space-y-4">
                             <Image
@@ -85,6 +86,12 @@ export default function Different() {
                             <li><span className="font-semibold">100% interactive</span> sessions - no recorded videos</li>
                         </ul>
                     </div>
+                </div>
+
+                {/* Wrapper for the last two tiles */}
+                <div className="lg:col-span-3 flex w-[550px] flex-col lg:flex-row lg:justify-center gap-10">
+                    {/* 1-to-1 Live Tutoring */}
+
 
                     {/* Interactive Practice Sessions */}
                     <div className="bg-pink-100 p-8 rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
