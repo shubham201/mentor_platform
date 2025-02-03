@@ -1,9 +1,23 @@
 import Navbar from "@/app/components/navbar";
 import EnrollNow from "@/app/components/enroll_now";
-
+import Head from "next/head";
 export default function BanksRailwaysSSC() {
   return (
     <div>
+      <Head>
+        <title>English Preparation Course | AtoInfinity Hub</title>
+        <meta name="description" content="Prepare for Bank, Railways, and SSC exams with our expert-led English Preparation Course. Improve your grammar, vocabulary, comprehension, and more." />
+        <meta name="keywords" content="English Preparation, SSC English, Bank English, Railways English, Competitive Exam Preparation" />
+        <meta name="author" content="AtoInfinity Hub" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        {/* Open Graph Meta Tags for Social Sharing */}
+        <meta property="og:title" content="English Preparation Course | AtoInfinity Hub" />
+        <meta property="og:description" content="Boost your English skills for Bank, Railways, and SSC exams with structured modules, mock tests, and expert mentorship." />
+        {/* <meta property="og:image" content="https://yourwebsite.com/path-to-course-image.jpg" />
+        <meta property="og:url" content="https://yourwebsite.com/english-preparation" />
+        <meta property="og:type" content="website" /> */}
+      </Head>
       <Navbar />
       {/* Hero Section */}
       <div className="bg-[#f2f4fc] pt-14 pb-5 text-center">

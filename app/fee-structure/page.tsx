@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import Buttons from "../components/buttons";
+import Head from "next/head";
 
 type CourseType = "English" | "Maths" | "Science" | "CTET" | "Banks,Railways,SSC";
 
@@ -97,6 +98,25 @@ export default function FeeStructure() {
 
   return (
     <div id="fee_structure" className="min-h-screen flex flex-col bg-gradient-to-r from-indigo-100 to-blue-200">
+      <Head>
+        <title>Affordable {course} Tutoring | Fee Structure & Discounts</title>
+        <meta
+          name="description"
+          content={`Explore our affordable ${course} tutoring services with special discounts and flexible learning plans.`}
+        />
+        <meta
+          name="keywords"
+          content="online tutoring, affordable tuition, English classes, Maths tuition, Science coaching, CTET preparation, SSC coaching, Bank exam coaching, Railway exam preparation, flexible learning, discounted tuition fees"
+        />
+        <meta name="author" content="AtoInfinity Hub" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Affordable ${course} Tutoring | Fee Structure & Discounts`} />
+        <meta
+          property="og:description"
+          content={`Get high-quality ${course} tutoring with discounts and flexible learning plans.`}
+        />
+      </Head>
       <Navbar />
       <div className="flex flex-col items-center justify-center flex-grow px-4 py-10">
         <h1 className="text-4xl font-bold text-black mb-8 text-center">

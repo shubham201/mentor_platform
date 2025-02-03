@@ -18,24 +18,49 @@ export default function Buttons({ navigate }: ButtonsProps) {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [address, setAddress] = useState("");
-
-  function handleSubmit(event: React.FormEvent) {
+  const [isSubmitted,setIsSubmitted]=useState(false);
+ 
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    console.log("Selected Courses:", selectedCourses);
-    console.log("Selected Grade:", selectedGrade);
-    console.log("Email:", email);
-    console.log("Name:", name);
-    console.log("Contact:", contact);
-    console.log("Address:", address);
+    setIsSubmitted(true);
+    console.log("Sending...");
 
-    setSelectedCourses([]);
-    setSelectedGrade("");
-    setEmail("");
-    setName("");
-    setContact("");
-    setAddress("");
-    setIsModalOpen(false);
-  }
+    const data = {
+        name,
+        email,
+        contact,
+        address,
+        selectedCourses,
+        selectedGrade,
+    };
+
+    try {
+        const res = await fetch("/api/student", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json, text/plain, */*",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+            console.log("Email sent successfully");
+            setSelectedCourses([]);
+            setSelectedGrade("");
+            setEmail("");
+            setName("");
+            setContact("");
+            setAddress("");
+            setIsModalOpen(false);
+            setIsSubmitted(false);
+        } else {
+            console.log("Failed to send email");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
 
   function closeForm() {
     setSelectedCourses([]);
@@ -45,6 +70,7 @@ export default function Buttons({ navigate }: ButtonsProps) {
     setContact("");
     setAddress("");
     setIsModalOpen(false);
+    setIsSubmitted(false);
   }
 
   const toggleCourseSelection = (course: string) => {
@@ -143,9 +169,14 @@ export default function Buttons({ navigate }: ButtonsProps) {
           )}
           <button
             type="submit"
-            className="w-full bg-[#43438B] hover:bg-[#7070c5] text-white py-2 rounded-md font-medium"
+            disabled={isSubmitted}
+            className={`w-full py-2 rounded-md font-medium text-white transition-all ${
+              isSubmitted
+                ? "bg-gray-400 cursor-not-allowed" 
+                : "bg-[#43438B] hover:bg-[#7070c5] cursor-pointer" 
+            }`}
           >
-            Submit
+            {isSubmitted ? "Submitting Form..." : "Submit"}
           </button>
         </form>
       </div>

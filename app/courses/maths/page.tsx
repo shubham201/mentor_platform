@@ -1,9 +1,19 @@
 import Navbar from "@/app/components/navbar";
 import EnrollNow from "@/app/components/enroll_now";
-
+import Head from "next/head";
 export default function English() {
   return (
     <div>
+      <Head>
+                <title>Maths Course for KG to 10th | AtoInfinity Hub</title>
+                <meta name="description" content="Boost your child's Maths skills with our interactive course for KG to 10th grade. Problem-solving, real-world applications, and structured learning at AtoInfinity Hub." />
+                <meta name="keywords" content="Maths course, KG to 10th, problem-solving, interactive learning, algebra, trigonometry, real-world maths, AtoInfinity Hub" />
+                <meta name="author" content="AtoInfinity Hub" />
+                <meta property="og:title" content="Maths Course for KG to 10th | AtoInfinity Hub" />
+                <meta property="og:description" content="Master Maths with interactive learning, real-world applications, and structured problem-solving at AtoInfinity Hub." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://yourwebsite.com/maths" />
+      </Head>
       <Navbar></Navbar>
 
       <div className="bg-[#f2f4fc] pt-14 pb-5 text-center">

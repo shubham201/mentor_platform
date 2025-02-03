@@ -1,9 +1,23 @@
 import Navbar from "@/app/components/navbar";
 import EnrollNow from "@/app/components/enroll_now";
+import Head from "next/head";
 
 export default function CTETPreparation() {
   return (
     <div>
+      <Head>
+        <title>CTET Preparation Course | AtoInfinity Hub</title>
+        <meta name="description" content="Join our CTET Preparation Course and get expert guidance, mock tests, and time management strategies to ace the Central Teacher Eligibility Test (CTET)." />
+        <meta name="keywords" content="CTET, CTET Preparation, Teacher Eligibility Test, Teaching Exam, CTET Coaching, Online CTET Course" />
+        <meta name="author" content="AtoInfinity Hub" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        {/* Open Graph Meta Tags for Social Sharing */}
+        <meta property="og:title" content="CTET Preparation Course | AtoInfinity Hub" />
+        <meta property="og:description" content="Comprehensive guidance for aspiring teachers preparing for the Central Teacher Eligibility Test (CTET)." />
+        {/* <meta property="og:url" content="https://yourwebsite.com/ctet-preparation" />
+        <meta property="og:type" content="website" /> */}
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

@@ -1,8 +1,21 @@
 import Navbar from "@/app/components/navbar"
 import EnrollNow from "@/app/components/enroll_now"
+import Head from "next/head";
 export default function English() {
     return (
       <div>
+        <Head>
+                <title>English Course for KG to 10th | AtoInfinity Hub</title>
+                <meta name="description" content="Boost your child's English skills with our structured course for KG to 10th grade. Engaging lessons, phonics, grammar, creative writing, and literature analysis at AtoInfinity Hub." />
+                <meta name="keywords" content="English course, KG to 10th, grammar, reading comprehension, creative writing, literature analysis, interactive learning, AtoInfinity Hub" />
+                <meta name="author" content="AtoInfinity Hub" />
+                <meta property="og:title" content="English Course for KG to 10th | AtoInfinity Hub" />
+                <meta property="og:description" content="Enroll in our comprehensive English course for KG to 10th grade. Strengthen language skills, develop confidence, and enhance communication abilities." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://yourwebsite.com/english" />
+                <meta property="og:image" content="https://yourwebsite.com/images/english-course.jpg" />
+                <meta name="robots" content="index, follow" />
+            </Head>
         <Navbar />
         {/* Header Section */}
         <div className="bg-[#f2f4fc] pt-14 pb-5 text-center">

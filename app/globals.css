@@ -2,21 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-slide-active {
-    @apply brightness-100;
-  }
-  
-  /* For side slides (next and previous) */
-  .swiper-slide-prev{
-    @apply opacity-60  brightness-90;
-  }
-  
-  .swiper-slide-next {
-    @apply opacity-60  brightness-90;
-  }
-  
-  .swiper-container {
-    width: 80%;
-  }
 
 

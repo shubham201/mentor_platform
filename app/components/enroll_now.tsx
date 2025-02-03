@@ -10,24 +10,48 @@ export default function EnrollNow() {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [address, setAddress] = useState("");
+  const [isSubmitted,setIsSubmitted]=useState(false);
 
-  function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    console.log("Selected Courses:", selectedCourses);
-    console.log("Selected Grade:", selectedGrade);
-    console.log("Email:", email);
-    console.log("Name:", name);
-    console.log("Contact:", contact);
-    console.log("Address:", address);
+    setIsSubmitted(true);
+    console.log("Sending...");
 
-    // Clear all form data after submission
-    setSelectedCourses([]);
-    setSelectedGrade("");
-    setEmail("");
-    setName("");
-    setContact("");
-    setAddress("");
-  }
+    const data = {
+        name,
+        email,
+        contact,
+        address,
+        selectedCourses,
+        selectedGrade,
+    };
+
+    try {
+        const res = await fetch("/api/student", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json, text/plain, */*",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+            console.log("Email sent successfully");
+            setSelectedCourses([]);
+            setSelectedGrade("");
+            setEmail("");
+            setName("");
+            setContact("");
+            setAddress("");
+            setIsSubmitted(false);
+        } else {
+            console.log("Failed to send email");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
 
   const toggleCourseSelection = (course: string) => {
     if (selectedCourses.includes(course)) {
@@ -134,9 +158,14 @@ export default function EnrollNow() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-[#43438B] hover:bg-[#7070c5] text-white py-2 rounded-md font-medium"
+            disabled={isSubmitted}
+            className={`w-full py-2 rounded-md font-medium text-white transition-all ${
+              isSubmitted
+                ? "bg-gray-400 cursor-not-allowed" 
+                : "bg-[#43438B] hover:bg-[#7070c5] cursor-pointer" 
+            }`}
           >
-            Submit
+            {isSubmitted ? "Submitting Form..." : "Submit"}
           </button>
         </form>
       </div>

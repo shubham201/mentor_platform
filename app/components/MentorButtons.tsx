@@ -8,15 +8,47 @@ export default function MentorButtons() {
   const [contact, setContact] = useState("");
   const [address, setAddress] = useState("");
   const [education, setEducation] = useState("");
+  const [isSubmitted,setIsSubmitted]=useState(false);
 
-  function handlesubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    setEmail("");
-    setName("");
-    setContact("");
-    setAddress("");
-    setEducation("");
-  }
+    setIsSubmitted(true);
+    console.log("Sending...");
+
+    const data = {
+        name,
+        email,
+        contact,
+        address,
+        education,
+    };
+
+    try {
+        const res = await fetch("/api/mentor", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json, text/plain, */*",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+            console.log("Email sent successfully");
+            setEducation("");
+            setEmail("");
+            setName("");
+            setContact("");
+            setAddress("");
+            setIsModalOpen(false);
+            setIsSubmitted(false);
+        } else {
+            console.log("Failed to send email");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
 
   function closeform() {
     setEmail("");
@@ -25,6 +57,7 @@ export default function MentorButtons() {
     setAddress("");
     setEducation("");
     setIsModalOpen(false);
+    setIsSubmitted(false);
   }
 
   return (
@@ -54,7 +87,7 @@ export default function MentorButtons() {
             <p className="text-center text-gray-600 mb-6">
               Fill in your details to become a mentor at AtoInfinity Hub!
             </p>
-            <form className="space-y-4" onSubmit={handlesubmit}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               {/* Name */}
               <input
                 type="text"
@@ -107,9 +140,14 @@ export default function MentorButtons() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#43438B] hover:bg-[#7070c5] text-white py-2 rounded-md font-medium"
+                disabled={isSubmitted}
+                className={`w-full py-2 rounded-md font-medium text-white transition-all ${
+                  isSubmitted
+                    ? "bg-gray-400 cursor-not-allowed" 
+                    : "bg-[#43438B] hover:bg-[#7070c5] cursor-pointer" 
+                }`}
               >
-                Submit
+                {isSubmitted ? "Submitting Form..." : "Submit"}
               </button>
             </form>
           </div>

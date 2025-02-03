@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://atoinfinityhub.com
+
+# Sitemaps
+Sitemap: https://atoinfinityhub.com/sitemap.xml

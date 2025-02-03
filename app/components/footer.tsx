@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <ul className="space-y-2">
               <li><Link href="#courses-overview">Join as Student</Link></li>
-              <li><Link href="#become-mentor">Become a Mentor</Link></li>
+              <li><Link href="/mentor">Become a Mentor</Link></li>
               <li><Link href="#courses-overview">Apply for Free Demo Class</Link></li>
               <li><Link href="/fee-structure">Fee Structure</Link></li>
             </ul>
@@ -33,7 +33,7 @@ export default function Footer() {
         {/* Contact Section */}
         <div className="flex flex-col items-start space-y-4 md:space-y-2 md:mr-4">
           <h4 className="font-semibold text-lg">Contact Us</h4>
-          <p className="text-sm">Email: <Link href="mailto:abc@gmail.com">abc@gmail.com</Link></p>
+          <p className="text-sm">Email: <Link href="mailto:abc@gmail.com">atoinfinityhub@gmail.com</Link></p>
           <p className="text-sm">Phone: <Link href="tel:9xxxxxxxxx">9xxxxxxxxx</Link></p>
           <p className="text-sm">Support: <Link href="tel:9xxxxxxxxx">9xxxxxxxxx</Link></p>
         </div>

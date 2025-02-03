@@ -1,9 +1,31 @@
 import Navbar from "@/app/components/navbar";
 import EnrollNow from "@/app/components/enroll_now";
+import Head from "next/head";
 
 export default function Science() {
     return (
         <div>
+          <Head>
+                <title>Science Course | Engaging Science Classes for KG to 10th</title>
+                <meta
+                    name="description"
+                    content="Enroll in our interactive Science course designed for students from KG to Class 10. Hands-on learning, real-world applications, and expert guidance!"
+                />
+                <meta
+                    name="keywords"
+                    content="Science classes, online Science tutoring, KG to 10th Science, Science coaching, interactive Science learning, Science experiments, physics, chemistry, biology, competitive exam Science, foundational Science concepts"
+                />
+                <meta name="author" content="AtoInfinity Hub" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="index, follow" />
+
+                {/* Open Graph (OG) Meta Tags for Social Media */}
+                <meta property="og:title" content="Science Course | Engaging Science Classes for KG to 10th" />
+                <meta
+                    property="og:description"
+                    content="Explore our engaging Science course with hands-on experiments and real-world applications. Designed for KG to 10th grade students."
+                />
+            </Head>
             <Navbar></Navbar>
             <div className="bg-[#f2f4fc] pt-14 pb-5 text-center">
                 <h1 className="text-4xl font-bold">Science Course</h1>

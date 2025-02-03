@@ -1,9 +1,25 @@
 import Navbar from "../components/navbar"
 import MentorButtons from "../components/MentorButtons"
+import  Head  from "next/head";
 
 export default function MentorReadMore() {
   return (
     <div>
+      <Head>
+        <title>Meet Our Mentors</title>
+        <meta
+          name="description"
+          content="Learn more about our expert mentors and their education backgrounds. Connect with them for guidance and support."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="mentors, education, career guidance, expert mentors" />
+        <meta property="og:title" content="Meet Our Mentors" />
+        <meta
+          property="og:description"
+          content="Explore the profiles of our experienced mentors and their diverse education details."
+        />
+        <meta name="twitter:title" content="Meet Our Mentors" />
+      </Head>
       <Navbar></Navbar>
 
       {/* Mentor 1 */}

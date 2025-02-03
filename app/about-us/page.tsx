@@ -1,9 +1,23 @@
 import Link from "next/link";
 import Navbar from "../components/navbar";
+import Head from "next/head";
 
 export default function AboutUsPage() {
   return (
     <div>
+       <Head>
+        {/* Basic Metadata */}
+        <title>About Us | AtoInfinity Hub</title>
+        <meta name="description" content="Learn more about AtoInfinity Hub, our mission, and how we connect students with expert mentors." />
+        <meta name="keywords" content="mentorship, online learning, professional growth, courses, education, AtoInfinity Hub" />
+        <meta name="author" content="AtoInfinity Hub" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* Open Graph (OG) Metadata */}
+        <meta property="og:title" content="About Us | AtoInfinity Hub" />
+        <meta property="og:description" content="Discover how AtoInfinity Hub connects students with expert mentors for learning and career growth." />
+        <meta property="og:type" content="website" />
+      </Head>
       <Navbar />
       <div>
         {/* Hero Section */}
