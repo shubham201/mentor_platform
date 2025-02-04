@@ -1,11 +1,14 @@
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faStarHalfAlt, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 interface FeedbackInterface {
   content: string;
   name: string;
   title: string;
   rating: number;
+  image: string; // Image file name (not URL)
+  videoUrl: string; // YouTube video URL
 }
 
 export default function Feedback1({ feedback }: { feedback: FeedbackInterface }) {
@@ -25,13 +28,28 @@ export default function Feedback1({ feedback }: { feedback: FeedbackInterface })
 
   return (
     <div className="bg-white rounded-xl p-6 sm:p-8 mx-auto shadow-lg flex flex-col items-center text-center w-full mb-4 max-w-xs sm:max-w-sm lg:max-w-md">
-      {/* Profile Placeholder */}
-      <div className="rounded-full border-4 border-white shadow-md w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center bg-gray-200">
-        <span className="text-gray-500 text-xl">👤</span>
+      {/* Profile Picture */}
+      <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-md">
+        <Image
+          src={`/static/${feedback.image}`} // Load from /public/static/
+          alt={feedback.name}
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
 
+      {/* Circular Play Button */}
+      <a
+        href={feedback.videoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 w-12 h-12 flex items-center justify-center text-center bg-red-500 text-white rounded-full shadow-md hover:bg-red-600 transition duration-300"
+      >
+        <FontAwesomeIcon icon={faPlay} className="text-xl" />
+      </a>
+
       {/* Feedback Content */}
-      <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-3 sm:mt-4 px-4">
+      <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-4 px-4">
         {feedback.content}
       </p>
 
@@ -44,5 +62,3 @@ export default function Feedback1({ feedback }: { feedback: FeedbackInterface })
     </div>
   );
 }
-
-

@@ -13,24 +13,33 @@ const feedbackData = [
     name: "John Doe",
     title: "Parent of a 5th Grader",
     rating: 3.5,
+    image:"feedback1.jpeg",
+    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
+
   },
   {
     content: "The teachers are very supportive and caring.",
     name: "Jane Smith",
     title: "Parent of a 7th Grader",
     rating: 4,
+    image:"feedback1.jpeg",
+    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
   },
   {
     content: "Wonderful experience. Highly recommend!",
     name: "Michael Brown",
     title: "Parent of a 3rd Grader",
     rating: 5,
+    image:"feedback1.jpeg",
+    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
   },
   {
     content: "Amazing curriculum and great support!",
     name: "Sarah Johnson",
     title: "Parent of a 2nd Grader",
     rating: 4.5,
+    image:"feedback1.jpeg",
+    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
   },
 ];
 
@@ -52,7 +61,7 @@ export default function Feedback() {
   }, []);
 
   return (
-    <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative w-screen">
+    <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative w-screen overflow-x-hidden">
       <div className="text-2xl pt-3 font-bold text-center">Feedback From Parents</div>
       <div className="text-xl pt-2 font-medium text-center">Subtitle</div>
       <button
@@ -61,11 +70,11 @@ export default function Feedback() {
                      bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
                      flex items-center justify-center w-12 h-12 
                      md:left-[50px] md:w-14 md:h-14 
-                     lg:left-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
+                     lg:left-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all "
       >
         <ChevronLeft size={28} />
       </button>
-      <div className="relative px-4 max-w-5xl mx-auto">
+      <div className="relative px-4 max-w-5xl mx-auto ">
         {/* Left Arrow */}
 
 

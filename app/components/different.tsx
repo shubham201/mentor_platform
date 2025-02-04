@@ -7,7 +7,7 @@ export default function Different() {
             <div className="text-center text-3xl font-extrabold">Why AtoInfinity Hub?</div>
 
             {/* Grid Layout */}
-            <div className=" flex-wrap gap-10 flex justify-center">
+            <div className=" flex-wrap overflow-hidden gap-10 flex justify-center">
                 {/* Expert Tutors */}
                 <div className="bg-blue-100 p-8 w-[550px] rounded-lg shadow-lg flex flex-col justify-center hover:scale-105 hover:shadow-2xl transition-transform min-h-[300px]">
                     <div className="flex flex-col items-center space-y-4">

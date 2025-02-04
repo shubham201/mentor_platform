@@ -65,7 +65,7 @@ export default function Navbar() {
             About Us
           </Link>
           <CoursesDropdown />
-          <Link href="/mentor" onClick={toggleSidebar} >Become a Mentor</Link>
+          <Link href="/mentor" onClick={toggleSidebar} >Mentors</Link>
           <Link href="/fee-structure" onClick={toggleSidebar}>
             Fee Structure
           </Link>
