@@ -35,7 +35,7 @@ export default function AboutUsPage() {
             <p className="text-base md:text-lg mb-4 text-gray-800">
               At AtoInfinity Hub, we bridge the gap between aspiring students and expert mentors. Our platform offers a wide array of
               <strong> comprehensive courses </strong>
-              designed to empower students with the skills they need to succeed in today&apos;s fast-paced world.Whether you're looking to enhance your knowledge, prepare for your dream career, or explore new interests, our carefully curated courses cater to learners of all levels.
+              designed to empower students with the skills they need to succeed in today&apos;s fast-paced world.Whether you&apos;re looking to enhance your knowledge, prepare for your dream career, or explore new interests, our carefully curated courses cater to learners of all levels.
             </p>
             <p className="text-base md:text-lg mb-4 text-gray-800">
               We take pride in our <strong>community of mentors</strong>—seasoned professionals and industry leaders dedicated to guiding
