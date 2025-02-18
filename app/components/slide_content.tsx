@@ -134,6 +134,43 @@ export function Slide4() {
       <div className={sharedContentStyles}>
         <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
           <Image
+            src="/static/ssc1.svg"
+            alt="Computer Course"
+            className={imageStyles}
+            width={600}
+            height={400}
+          />
+        </div>
+        <div className="max-w-[550px] space-y-6 text-center lg:text-left lg:w-1/2">
+          <div className="text-2xl lg:text-3xl font-bold">
+            Interactive Computer Learning Program
+          </div>
+          <div className="text-lg lg:text-xl font-medium">
+            For Classes KG to 10th
+          </div>
+          <div className="text-gray-700 text-sm lg:text-base">
+            Our Computer Learning Program is designed to introduce students 
+            from KG to 10th grade to essential digital skills. The course 
+            covers fundamental topics such as basic computer operations, 
+            MS Office tools, internet usage, coding basics, and digital 
+            safety. With interactive lessons, hands-on projects, and 
+            engaging activities, students develop practical skills and 
+            confidence in using technology effectively for academics and 
+            beyond.
+          </div>
+          <Buttons navigate="computer" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function Slide5() {
+  return (
+    <div className={sharedContainerStyles}>
+      <div className={sharedContentStyles}>
+        <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
+          <Image
             src="/static/ctet.svg"
             alt="CTET Preparation"
             className={imageStyles}
@@ -166,40 +203,5 @@ export function Slide4() {
   );
 }
 
-export function Slide5() {
-  return (
-    <div className={sharedContainerStyles}>
-      <div className={sharedContentStyles}>
-        <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
-          <Image
-            src="/static/ssc1.svg"
-            alt="SSC Exam Preparation"
-            className={imageStyles}
-            width={600}
-            height={400}
-          />
-        </div>
-        <div className="max-w-[550px] space-y-6 text-center lg:text-left lg:w-1/2">
-          <div className="text-2xl lg:text-3xl font-bold">
-            Comprehensive English Preparation Program
-          </div>
-          <div className="text-lg lg:text-xl font-medium">
-            For Bank, Railways, and SSC Exams
-          </div>
-          <div className="text-gray-700 text-sm lg:text-base">
-            Our English Preparation Program for Bank, Railways, and SSC exams is
-            expertly crafted to equip aspirants with the language skills and
-            strategies needed to excel in competitive exams. The course covers
-            key areas, including grammar, vocabulary, reading comprehension,
-            verbal ability, and error detection, tailored to exam-specific
-            requirements. With interactive lessons, practice exercises, mock
-            tests, and time-management tips, candidates gain the confidence and
-            proficiency to tackle the English section effectively and achieve
-            their career aspirations.
-          </div>
-          <Buttons navigate="banks-railways-ssc" />
-        </div>
-      </div>
-    </div>
-  );
-}
+
+

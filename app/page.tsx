@@ -3,7 +3,9 @@ import AboutUs from "./components/courses_overview";
 import Feedback from "./components/feedback";
 import Footer from "./components/footer";
 import Different from "./components/different";
+import Mentors from "./components/mentors";
 import Head from "next/head";
+import CoverPage from "./components/coverpage";
 export default function Home() {
   return (
     <div>
@@ -21,10 +23,11 @@ export default function Home() {
       </Head>
 
       <Navbar></Navbar>
+      <CoverPage></CoverPage>
       <AboutUs></AboutUs>
       <Different></Different>
       <Feedback></Feedback>
-      {/* <Mentors></Mentors> */}
+      <Mentors></Mentors>
       <Footer></Footer>
     </div>
   );

@@ -6,7 +6,7 @@ import { RiArrowDropUpLine } from "react-icons/ri";
 
 export default function CoursesDropdown() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const courses = ["English", "Maths", "Science", "CTET", "Banks, Railways, SSC"];
+  const courses = ["English", "Maths", "Science", "Computer","CTET",];
 
   return (
     <div className="relative">

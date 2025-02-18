@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icons for menu toggle
 import CoursesDropdown from "./coursesDropdown"; // Dropdown component
+import Image from "next/image";
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -17,14 +18,15 @@ export default function Navbar() {
       {/* Navbar container */}
       <div className="flex justify-between items-center px-6 py-4">
         {/* Logo Section */}
-        <div className="bg-[#F2F4FC] w-12 h-12 rounded-full"></div>
+        {/* <div className="bg-[#F2F4FC] w-12 h-12 rounded-full"></div> */}
+        <Image src="/static/logo.png" alt="logo" width={80} height={80} className="rounded-full" ></Image>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-14 text-white">
+        <div className="hidden md:flex space-x-14 font-medium text-white">
           <Link href="/">Home</Link>
           <Link href="/about-us">About Us</Link>
           <CoursesDropdown />
-          <Link href="/mentor" >Mentors</Link>
+          {/* <Link href="/mentor" >Mentors</Link> */}
           <Link href="/fee-structure">Fee Structure</Link>
         </div>
 
@@ -65,7 +67,7 @@ export default function Navbar() {
             About Us
           </Link>
           <CoursesDropdown />
-          <Link href="/mentor" onClick={toggleSidebar} >Mentors</Link>
+          {/* <Link href="/mentor" onClick={toggleSidebar} >Mentors</Link> */}
           <Link href="/fee-structure" onClick={toggleSidebar}>
             Fee Structure
           </Link>

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
-
+import Image from 'next/image';
 export default function Footer() {
   return (
     <div className="bg-[#43438b] text-white py-10 px-6 md:px-16">
@@ -40,7 +40,8 @@ export default function Footer() {
 
         {/* Logo Section */}
         <div className="flex justify-center md:justify-end">
-          <div className="bg-[#F2F4FC] w-[120px] h-[120px] rounded-full"></div>
+          {/* <div className="bg-[#F2F4FC] w-[120px] h-[120px] rounded-full"></div> */}
+          <Image src="/static/logo.png" alt="logo" width={150} height={150} className="rounded-full" ></Image>
         </div>
       </div>
 

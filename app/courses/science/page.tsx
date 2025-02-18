@@ -85,47 +85,28 @@ export default function Science() {
                 </p>
             </div>
 
-            <div className="bg-yellow-400 py-10 px-4 sm:px-8">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-xl sm:text-3xl font-bold text-black mb-6">
-              Affordable Science Tutoring for Your Child
-            </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg shadow-md p-6 text-left">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-base sm:text-lg font-bold">
-                    KG to Class 5
-                  </h2>
-                  <span className="text-green-500 text-sm">13.5% OFF</span>
-                </div>
-                <p className="text-gray-700 text-sm sm:text-base mb-2">
-                  ₹541/class <span className="line-through">₹626</span>
-                </p>
-                <p className="text-gray-700 text-sm sm:text-base">
-                  ₹525/class for 12 months (96 classes)
-                </p>
-                <p className="text-gray-600 text-xs sm:text-sm mt-1">
-                  6 months, 48 classes
-                </p>
-              </div>
-              <div className="bg-white rounded-lg shadow-md p-6 text-left">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-base sm:text-lg font-bold">
-                    Class 6 to Class 10
-                  </h2>
-                  <span className="text-green-500 text-sm">5% OFF</span>
-                </div>
-                <p className="text-gray-700 text-sm sm:text-base mb-2">
-                  ₹788/class <span className="line-through">₹829</span>
-                </p>
-                <p className="text-gray-700 text-sm sm:text-base">
-                  ₹750/class for 12 months (96 classes)
-                </p>
-                <p className="text-gray-600 text-xs sm:text-sm mt-1">
-                  6 months, 48 classes
-                </p>
-              </div>
+            <div className="bg-yellow-400 py-12 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-2xl md:text-3xl font-bold text-black mb-6">Affordable Science Learning for Students</h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* KG to 5th Fee Structure */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-left transform hover:scale-105 transition duration-300">
+              <h2 className="text-lg font-bold">KG to 5th</h2>
+              <p className="text-gray-700 text-sm mb-4">2 Days/Week: ₹3500/month</p>
+              <p className="text-gray-700 text-sm mb-4">3 Days/Week: ₹5000/month</p>
+              <p className="text-gray-700 text-sm mb-4">5 Days/Week: ₹7500/month</p>
             </div>
+
+            {/* 6th to 10th Fee Structure */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-left transform hover:scale-105 transition duration-300">
+              <h2 className="text-lg font-bold">6th to 10th</h2>
+              <p className="text-gray-700 text-sm mb-4">2 Days/Week: ₹4000/month</p>
+              <p className="text-gray-700 text-sm mb-4">3 Days/Week: ₹5500/month</p>
+              <p className="text-gray-700 text-sm mb-4">5 Days/Week: ₹8000/month</p>
+            </div>
+          </div>
+
             <div className="flex justify-center mt-8 space-x-4">
               <div className="text-center">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto mb-2">

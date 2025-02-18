@@ -4,95 +4,43 @@ import Navbar from "../components/navbar";
 import Buttons from "../components/buttons";
 import Head from "next/head";
 
-type CourseType = "English" | "Maths" | "Science" | "CTET" | "Banks,Railways,SSC";
+type CourseType = "English" | "Maths" | "Science" | "Computer" | "CTET";
 
 export default function FeeStructure() {
   const [course, setCourse] = useState<CourseType>("English");
 
   const feeData: Record<
     CourseType,
-    {
-      title: string;
-      discount: string;
-      price: string;
-      originalPrice: string;
-      annualPrice: string;
-      duration: string;
-    }[]
+    { title: string; price: string; duration: string; category: "KG to 5" | "6 to 10" }[]
   > = {
     English: [
-      {
-        title: "Kg to Class 5",
-        discount: "13.5% OFF",
-        price: "₹541/class",
-        originalPrice: "₹626",
-        annualPrice: "₹525/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
-      {
-        title: "Class 6 to Class 10",
-        discount: "5% OFF",
-        price: "₹788/class",
-        originalPrice: "₹829",
-        annualPrice: "₹750/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
+      { title: "2 Days/Week", price: "₹3500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "3 Days/Week", price: "₹5000/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "5 Days/Week", price: "₹7500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "2 Days/Week", price: "₹4000/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "3 Days/Week", price: "₹5500/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "5 Days/Week", price: "₹8000/month", duration: "Ongoing", category: "6 to 10" },
     ],
-    Maths: [
-      {
-        title: "Kg to Class 5",
-        discount: "10% OFF",
-        price: "₹500/class",
-        originalPrice: "₹556",
-        annualPrice: "₹480/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
-      {
-        title: "Class 6 to Class 10",
-        discount: "8% OFF",
-        price: "₹700/class",
-        originalPrice: "₹760",
-        annualPrice: "₹680/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
-    ],
-    Science: [
-      {
-        title: "Kg to Class 5",
-        discount: "12% OFF",
-        price: "₹530/class",
-        originalPrice: "₹602",
-        annualPrice: "₹510/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
-      {
-        title: "Class 6 to Class 10",
-        discount: "7% OFF",
-        price: "₹720/class",
-        originalPrice: "₹774",
-        annualPrice: "₹700/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
-    ],
+    Maths: [ { title: "2 Days/Week", price: "₹3500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "3 Days/Week", price: "₹5000/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "5 Days/Week", price: "₹7500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "2 Days/Week", price: "₹4000/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "3 Days/Week", price: "₹5500/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "5 Days/Week", price: "₹8000/month", duration: "Ongoing", category: "6 to 10" },],
+    Science: [ { title: "2 Days/Week", price: "₹3500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "3 Days/Week", price: "₹5000/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "5 Days/Week", price: "₹7500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "2 Days/Week", price: "₹4000/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "3 Days/Week", price: "₹5500/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "5 Days/Week", price: "₹8000/month", duration: "Ongoing", category: "6 to 10" },],
+    Computer: [ { title: "2 Days/Week", price: "₹3500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "3 Days/Week", price: "₹5000/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "5 Days/Week", price: "₹7500/month", duration: "Ongoing", category: "KG to 5" },
+      { title: "2 Days/Week", price: "₹4000/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "3 Days/Week", price: "₹5500/month", duration: "Ongoing", category: "6 to 10" },
+      { title: "5 Days/Week", price: "₹8000/month", duration: "Ongoing", category: "6 to 10" },],
     CTET: [
-      {
-        title: "CTET Basic",
-        discount: "15% OFF",
-        price: "₹600/class",
-        originalPrice: "₹705",
-        annualPrice: "₹580/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
-    ],
-    "Banks,Railways,SSC": [
-      {
-        title: "Competitive Exams",
-        discount: "20% OFF",
-        price: "₹850/class",
-        originalPrice: "₹1062",
-        annualPrice: "₹800/class for 12 months (96 classes)",
-        duration: "6 months, 48 classes",
-      },
+      { title: "Group Batch (15 Students)", price: "₹800/month", duration: "6 months", category: "KG to 5" },
     ],
   };
 
@@ -100,95 +48,57 @@ export default function FeeStructure() {
     <div id="fee_structure" className="min-h-screen flex flex-col bg-gradient-to-r from-indigo-100 to-blue-200">
       <Head>
         <title>Affordable {course} Tutoring | Fee Structure & Discounts</title>
-        <meta
-          name="description"
-          content={`Explore our affordable ${course} tutoring services with special discounts and flexible learning plans.`}
-        />
-        <meta
-          name="keywords"
-          content="online tutoring, affordable tuition, English classes, Maths tuition, Science coaching, CTET preparation, SSC coaching, Bank exam coaching, Railway exam preparation, flexible learning, discounted tuition fees"
-        />
-        <meta name="author" content="AtoInfinity Hub" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={`Affordable ${course} Tutoring | Fee Structure & Discounts`} />
-        <meta
-          property="og:description"
-          content={`Get high-quality ${course} tutoring with discounts and flexible learning plans.`}
-        />
+        <meta name="description" content={`Explore our affordable ${course} tutoring services with flexible learning plans.`} />
       </Head>
       <Navbar />
       <div className="flex flex-col items-center justify-center flex-grow px-4 py-10">
-        <h1 className="text-4xl font-bold text-black mb-8 text-center">
-          Affordable {course} Tutoring for Your Child
-        </h1>
+        <h1 className="text-4xl font-bold  mb-8 text-center">Affordable {course} Tutoring</h1>
+
         <div className="flex justify-center space-x-4 mb-10 flex-wrap">
           {(Object.keys(feeData) as CourseType[]).map((item) => (
             <button
               key={item}
               onClick={() => setCourse(item)}
-              className={`px-6 py-3 my-3 font-semibold rounded-full transition duration-200 ${
-                course === item
-                  ? "bg-black text-white"
-                  : "bg-white text-black hover:bg-gray-200"
+              className={`px-6 py-3 my-3 font-semibold rounded-full transition-all duration-300 shadow-md hover:scale-105 hover:bg-black hover:text-white ${
+                course === item ? "bg-black text-white" : "bg-white text-black"
               }`}
             >
               {item}
             </button>
           ))}
         </div>
-        <div className="flex flex-col items-center w-full space-y-6 sm:space-y-4 md:space-y-6">
-          {feeData[course].map((fee, index) => (
-            <div
-              key={index}
-              className="max-w-md w-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 p-6"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-gray-800">{fee.title}</h2>
-                <span className="text-green-500 text-sm font-semibold">{fee.discount}</span>
+
+        {course !== "CTET" && (
+          <div className="flex flex-wrap justify-center gap-12 w-full max-w-5xl">
+            {["KG to 5", "6 to 10"].map((category) => (
+              <div key={category} className="flex flex-col items-center">
+                <h2 className="text-2xl font-semibold  px-4 py-2  mb-4">{category}</h2>
+                <div className="flex flex-col gap-4">
+                  {feeData[course].filter(fee => fee.category === category).map((fee, index) => (
+                    <div key={index} className="bg-white rounded-2xl shadow-lg p-6 w-64 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                      <h3 className="text-lg font-bold text-gray-900">{fee.title}</h3>
+                      <p className="text-gray-700 font-semibold">{fee.price}</p>
+                      <p className="text-sm text-gray-600">{fee.duration}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <p className="text-gray-700 text-base mb-2">
-                {fee.price}{" "}
-                <span className="line-through text-gray-500">
-                  {fee.originalPrice}
-                </span>
-              </p>
-              <p className="text-gray-700 text-base mb-4">{fee.annualPrice}</p>
-              <p className="text-sm text-gray-600">{fee.duration}</p>
+            ))}
+          </div>
+        )}
+
+        {course === "CTET" && (
+          <div className="flex flex-col items-center">
+            <div className="bg-white rounded-2xl shadow-lg p-6 w-64 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <h3 className="text-lg font-bold text-gray-900">{feeData[course][0].title}</h3>
+              <p className="text-gray-700 font-semibold">{feeData[course][0].price}</p>
+              <p className="text-sm text-gray-600">{feeData[course][0].duration}</p>
             </div>
-          ))}
-        </div>
-        
-        <Buttons navigate={`${course.replace(/,/g, "-").toLowerCase()}`} ></Buttons>
-        
-        <div className="flex justify-center mt-16 space-x-4 sm:space-x-6 md:space-x-10">
-  <div className="text-center">
-    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-      🗓️
-    </div>
-    <p className="text-sm text-gray-800 font-semibold">
-      Flexible Leaves
-    </p>
-  </div>
-  <div className="text-center">
-    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-      🕒
-    </div>
-    <p className="text-sm text-gray-800 font-semibold">
-      Adjustable Schedule
-    </p>
-  </div>
-  <div className="text-center">
-    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-      🔄
-    </div>
-    <p className="text-sm text-gray-800 font-semibold">Easy Refunds</p>
-  </div>
-</div>
+          </div>
+        )}
 
-
+        <Buttons navigate={`${course.replace(/,/g, "-").toLowerCase()}`} />
       </div>
     </div>
   );
 }
-

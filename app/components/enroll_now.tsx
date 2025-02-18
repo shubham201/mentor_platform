@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function EnrollNow() {
-  const courses = ["English", "Maths","Science", "CTET", "Banks, Railways, SSC"];
+  const courses = ["English", "Maths","Science", "Computer","CTET",];
   const grades = ["KG", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"];
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
   const [selectedGrade, setSelectedGrade] = useState("");
@@ -134,7 +134,8 @@ export default function EnrollNow() {
           {/* Select Grade */}
           {(selectedCourses.includes("English") ||
             selectedCourses.includes("Maths") ||
-            selectedCourses.includes("Science")) && (
+            selectedCourses.includes("Science") ||
+            selectedCourses.includes("Computer") ) && (
             <div>
               <h3 className="text-lg font-medium mb-2">Select a Grade:</h3>
               <select

@@ -5,42 +5,33 @@ import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Feedback1 from "./feedbackLayout";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // New icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const feedbackData = [
   {
-    content: "Great school! My child has learned so much.",
-    name: "John Doe",
-    title: "Parent of a 5th Grader",
-    rating: 3.5,
-    image:"feedback1.jpeg",
-    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
-
+    content: "I've noticed a huge improvement in my math skills since I started taking classes with Shubham. He explains everything really well, and thanks to his help, I’m now faster and more accurate at solving problems, and my grades have improved too.",
+    name: "Dakshit",
+    title: "6th grade",
+    rating: 5,
+    image: "feedback1.jpeg",
+    videoUrl: "https://youtube.com/shorts/uzdX2g55pec?feature=share"
   },
   {
-    content: "The teachers are very supportive and caring.",
-    name: "Jane Smith",
-    title: "Parent of a 7th Grader",
-    rating: 4,
-    image:"feedback1.jpeg",
-    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
+    content: "Ever since I started online classes with Shalini ma'am, I have improved so much in math and English! I solve math problems faster and write better stories with good grammar",
+    name: "Dhhanvin Aleti",
+    title: "4th grade",
+    rating: 5,
+    image: "feedback2.jpeg",
+    videoUrl: "https://youtube.com/shorts/pWQ4A3TRgXw"
   },
   {
-    content: "Wonderful experience. Highly recommend!",
+    content: "I've noticed a huge improvement in my math skills since I started taking classes with Shubham. He explains everything really well, and thanks to his help, I’m now faster and more accurate at solving problems, and my grades have improved too.",
     name: "Michael Brown",
     title: "Parent of a 3rd Grader",
     rating: 5,
-    image:"feedback1.jpeg",
-    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
-  },
-  {
-    content: "Amazing curriculum and great support!",
-    name: "Sarah Johnson",
-    title: "Parent of a 2nd Grader",
-    rating: 4.5,
-    image:"feedback1.jpeg",
-    videoUrl:"https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
-  },
+    image: "feedback1.jpeg",
+    videoUrl: "https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
+  }
 ];
 
 export default function Feedback() {
@@ -60,28 +51,29 @@ export default function Feedback() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % feedbackData.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + feedbackData.length) % feedbackData.length);
+  };
+
   return (
     <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative w-screen overflow-x-hidden">
       <div className="text-2xl pt-3 font-bold text-center">Feedback From Parents</div>
       <div className="text-xl pt-2 font-medium text-center">Subtitle</div>
       <button
-        onClick={() => setCurrentSlide((prev) => Math.max(prev - 1, 0))}
-        className="absolute left-4 top-[60%] transform -translate-y-1/2 
-                     bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
-                     flex items-center justify-center w-12 h-12 
-                     md:left-[50px] md:w-14 md:h-14 
-                     lg:left-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all "
+        onClick={handlePrev}
+        className="absolute left-4 top-[60%] transform -translate-y-1/2 bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 flex items-center justify-center w-12 h-12 md:left-[50px] md:w-14 md:h-14 lg:left-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
       >
         <ChevronLeft size={28} />
       </button>
       <div className="relative px-4 max-w-5xl mx-auto ">
-        {/* Left Arrow */}
-
-
         <Carousel
           showThumbs={false}
           showStatus={false}
-          showArrows={false} // Hide default arrows
+          showArrows={false}
           infiniteLoop
           emulateTouch
           autoPlay
@@ -90,11 +82,10 @@ export default function Feedback() {
           selectedItem={currentSlide}
           onChange={setCurrentSlide}
           centerMode
-          centerSlidePercentage={isMobile ? 100 : isTablet ? 60 : 47} // Adjusted for tablet layout
+          centerSlidePercentage={isMobile ? 100 : isTablet ? 60 : 47}
           renderIndicator={(onClickHandler, isSelected, index) => (
             <li
-              className={`w-3 h-3 mx-1 rounded-full inline-block cursor-pointer ${isSelected ? "bg-blue-600" : "bg-gray-300"
-                }`}
+              className={`w-3 h-3 mx-1 rounded-full inline-block cursor-pointer ${isSelected ? "bg-blue-600" : "bg-gray-300"}`}
               onClick={onClickHandler}
               key={index}
             />
@@ -112,17 +103,10 @@ export default function Feedback() {
             </motion.div>
           ))}
         </Carousel>
-
-        {/* Right Arrow */}
-
       </div>
       <button
-        onClick={() => setCurrentSlide((prev) => Math.min(prev + 1, feedbackData.length - 1))}
-        className="absolute right-4 top-[60%] transform -translate-y-1/2 
-                     bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 
-                     flex items-center justify-center w-12 h-12 
-                     md:right-[50px] md:w-14 md:h-14 
-                     lg:right-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
+        onClick={handleNext}
+        className="absolute right-4 top-[60%] transform -translate-y-1/2 bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 flex items-center justify-center w-12 h-12 md:right-[50px] md:w-14 md:h-14 lg:right-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"
       >
         <ChevronRight size={28} />
       </button>
