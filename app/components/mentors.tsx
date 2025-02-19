@@ -1,4 +1,5 @@
 import MentorButtons from "./MentorButtons";
+import Image from "next/image";
 
 export default function Mentors() {
   return (
@@ -7,10 +8,20 @@ export default function Mentors() {
       <div className="text-xl pt-3 font-medium text-center">Experts Who Guide Your Learning</div>
       
       <div className="px-10 flex flex-wrap justify-center md:justify-between">
-        <div className="flex flex-col items-center m-4">
-          <div className="bg-[#F2F4FC] rounded-full w-[200px] h-[200px] mt-8"></div>
-          <div className="text-center pt-2 font-medium">Details S1</div>
+      <div className="flex flex-col items-center mt-16 mx-10 bg-white p-6 rounded-2xl shadow-lg">
+        <div className="relative w-40 h-40 rounded-full overflow-hidden">
+          <Image 
+            src="/static/shubham.jpeg" 
+            alt="mentor-Shubham Bharti" 
+            width={150} 
+            height={150} 
+            className="object-cover w-full h-full"
+          />
         </div>
+        <div className="text-center mt-4 text-2xl font-bold text-gray-800">Shubham Bharti</div>
+        <div className="text-center mt-1 text-lg font-medium text-gray-600">Computer Science Alumni, IIT BHU</div>
+      </div>
+
         <div className="flex flex-col items-center m-4">
           <div className="bg-[#F2F4FC] rounded-full w-[200px] h-[200px] mt-8"></div>
           <div className="text-center pt-2 font-medium">Details S2</div>

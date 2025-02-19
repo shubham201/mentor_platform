@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-6 py-4">
         {/* Logo Section */}
         {/* <div className="bg-[#F2F4FC] w-12 h-12 rounded-full"></div> */}
-        <Image src="/static/logo.png" alt="logo" width={80} height={80} className="rounded-full" ></Image>
+        <Image src="/static/logo.jpg" alt="logo"  width={350} height={350} ></Image>
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-14 font-medium text-white">
