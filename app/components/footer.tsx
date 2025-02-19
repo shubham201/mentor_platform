@@ -41,7 +41,7 @@ export default function Footer() {
         {/* Logo Section */}
         <div className="flex justify-center md:justify-end">
           {/* <div className="bg-[#F2F4FC] w-[120px] h-[120px] rounded-full"></div> */}
-          <Image src="/static/logo_circle.png" alt="logo" width={200} height={200} className="rounded-full" ></Image>
+          <Image src="/static/footer_logo.png" alt="logo" width={200} height={200} className="rounded-full" ></Image>
         </div>
       </div>
 
