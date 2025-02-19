@@ -61,8 +61,8 @@ export default function Feedback() {
 
   return (
     <div id="feedback" className="bg-gradient-to-r from-blue-100 to-indigo-100 py-6 relative w-screen overflow-x-hidden">
-      <div className="text-2xl pt-3 font-bold text-center">Feedback From Parents</div>
-      <div className="text-xl pt-2 font-medium text-center">Subtitle</div>
+      <div className="text-2xl pt-3 font-bold text-center">Feedback</div>
+      {/* <div className="text-xl pt-2 font-medium text-center">Subtitle</div> */}
       <button
         onClick={handlePrev}
         className="absolute left-4 top-[60%] transform -translate-y-1/2 bg-white text-blue-600 border border-blue-600 rounded-full shadow-lg z-50 flex items-center justify-center w-12 h-12 md:left-[50px] md:w-14 md:h-14 lg:left-[70px] lg:w-16 lg:h-16 hover:text-white hover:bg-blue-600 transition-all"

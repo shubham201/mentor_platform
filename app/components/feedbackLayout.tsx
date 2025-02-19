@@ -33,8 +33,8 @@ export default function Feedback1({ feedback }: { feedback: FeedbackInterface })
         <Image
           src={`/static/${feedback.image}`} // Load from /public/static/
           alt={feedback.name}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
         />
       </div>
 

@@ -2,9 +2,9 @@ import MentorButtons from "./MentorButtons";
 
 export default function Mentors() {
   return (
-    <div className="px-4">
+    <div  id="mentors" className="px-4">
       <div className="text-2xl pt-3 font-bold text-center">Our Mentors</div>
-      <div className="text-xl pt-3 font-medium text-center">Subtitle</div>
+      <div className="text-xl pt-3 font-medium text-center">Experts Who Guide Your Learning</div>
       
       <div className="px-10 flex flex-wrap justify-center md:justify-between">
         <div className="flex flex-col items-center m-4">
