@@ -89,11 +89,14 @@ export default function CTETPreparation() {
             Affordable CTET Coaching for Aspiring Teachers
           </h1>
           <div className="flex justify-center">
-          <div className="max-w-xs bg-white rounded-lg shadow-lg p-6 text-left transform hover:scale-105 transition duration-300">
+          <div className=" bg-white rounded-lg shadow-lg p-6 text-left transform hover:scale-105 transition duration-300">
               <h2 className="text-lg font-bold">Group Batch (15 Students)</h2>
-            <p className="text-gray-700 text-sm mb-4">
-              ₹800/month
-            </p>
+
+              <div className="flex justify-between" >
+                <p className="text-gray-700 text-sm mb-4">₹800/month</p>
+                <p className="text-gray-700 text-sm line-through">₹1000/month</p>
+              </div>
+            
             <p className="text-sm text-gray-600">Duration: 6 months</p>
           </div>
         </div>

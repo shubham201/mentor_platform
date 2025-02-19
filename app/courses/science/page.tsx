@@ -93,17 +93,36 @@ export default function Science() {
             {/* KG to 5th Fee Structure */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-left transform hover:scale-105 transition duration-300">
               <h2 className="text-lg font-bold">KG to 5th</h2>
-              <p className="text-gray-700 text-sm mb-4">2 Days/Week: ₹3500/month</p>
-              <p className="text-gray-700 text-sm mb-4">3 Days/Week: ₹5000/month</p>
+              <div className="flex justify-between" >
+                <p className="text-gray-700 text-sm mb-4">2 Days/Week: ₹3500/month</p>
+                <p className="text-gray-700 text-sm line-through">₹4000/month</p>
+              </div>
+              <div className="flex justify-between" >
+                <p className="text-gray-700 text-sm mb-4">3 Days/Week: ₹5000/month</p>
+                <p className="text-gray-700 text-sm line-through">₹6000/month</p>
+              </div>
+              <div className="flex justify-between" >
               <p className="text-gray-700 text-sm mb-4">5 Days/Week: ₹7500/month</p>
+              <p className="text-gray-700 text-sm line-through">₹9000/month</p>
+              </div>
             </div>
 
             {/* 6th to 10th Fee Structure */}
             <div className="bg-white rounded-lg shadow-lg p-6 text-left transform hover:scale-105 transition duration-300">
               <h2 className="text-lg font-bold">6th to 10th</h2>
-              <p className="text-gray-700 text-sm mb-4">2 Days/Week: ₹4000/month</p>
-              <p className="text-gray-700 text-sm mb-4">3 Days/Week: ₹5500/month</p>
-              <p className="text-gray-700 text-sm mb-4">5 Days/Week: ₹8000/month</p>
+              <div className="flex justify-between">
+                  <p className="text-gray-700 text-sm mb-4">2 Days/Week: ₹4000/month</p>
+                  <p className="text-gray-700 text-sm line-through">₹5000/month</p>
+              </div>
+              <div className="flex justify-between">
+                <p className="text-gray-700 text-sm mb-4">3 Days/Week: ₹5500/month</p>
+                <p className="text-gray-700 text-sm line-through">₹7000/month</p>
+              </div>
+
+             <div className="flex justify-between">
+                <p className="text-gray-700 text-sm mb-4">5 Days/Week: ₹8000/month</p>
+                <p className="text-gray-700 text-sm line-through">₹10000/month</p>
+             </div > 
             </div>
           </div>
 
