@@ -121,7 +121,7 @@ export default function BookADemoClass(){
               />
               <div>
                 <h3 className="text-lg font-medium mb-2">Select Courses:</h3>
-                <div className="flex items-center overflow-x-auto space-x-6 whitespace-nowrap">
+                <div className="flex pb-4 items-center overflow-x-auto space-x-6 whitespace-nowrap">
                   {courses.map((course) => (
                     <label
                       key={course}

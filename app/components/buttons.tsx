@@ -127,7 +127,7 @@ export default function Buttons({ navigate }: ButtonsProps) {
           />
           <div>
             <h3 className="text-lg font-medium mb-2">Select Courses:</h3>
-            <div className="flex items-center overflow-x-auto space-x-6 whitespace-nowrap">
+            <div className="flex items-center pb-4 overflow-x-auto space-x-6 whitespace-nowrap">
               {courses.map((course) => (
                 <label
                   key={course}
