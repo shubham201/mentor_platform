@@ -12,7 +12,7 @@ export default function Mentors() {
         <div className="w-[400px] flex flex-col items-center mt-16  bg-white p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
           <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-gray-300">
             <Image
-              src="/static/shalini2.jpg"
+              src="/static/shalini3.png"
               alt="mentor-Shalini Kumari"
               width={150}
               height={150}
@@ -44,7 +44,7 @@ export default function Mentors() {
           </div>
           <div className="text-center mt-4 text-2xl font-bold text-gray-800">Shubham Bharti</div>
           <div className="text-center mt-1 text-lg font-medium text-gray-600">
-            Computer Science Alumni, IIT BHU
+            Computer Science, IIT BHU
           </div>
           <Link
             href="https://www.linkedin.com/in/shubham-bharti-64aa55b6/"
