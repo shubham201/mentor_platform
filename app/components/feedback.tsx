@@ -25,12 +25,12 @@ const feedbackData = [
     videoUrl: "https://youtube.com/shorts/pWQ4A3TRgXw"
   },
   {
-    content: "I've noticed a huge improvement in my math skills since I started taking classes with Shubham. He explains everything really well, and thanks to his help, I’m now faster and more accurate at solving problems, and my grades have improved too.",
-    name: "Michael Brown",
-    title: "Parent of a 3rd Grader",
+    content: "Learning Social Sciences with Shalini Ma'am has been an amazing experience! History, Geography, and Polity used to feel overwhelming, but the way she explained concepts made everything so easy to understand. Highly recommended for anyone looking for a great tutor! 😊📚✨",
+    name: "Shresth Anand",
+    title: "10th Grader",
     rating: 5,
-    image: "feedback1.jpeg",
-    videoUrl: "https://youtu.be/a3ICNMQW7Ok?si=I3vEWYQNWxIvZK1v"
+    image: "shresth.png",
+    videoUrl: ""
   }
 ];
 
