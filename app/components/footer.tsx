@@ -47,7 +47,7 @@ export default function Footer() {
 
       {/* Social Media Icons */}
       <div className="mt-6 flex justify-center space-x-6">
-        <Link href="https://www.linkedin.com/in/shalini-roy-8142a4304" passHref>
+        <Link href="https://www.linkedin.com/in/shalini-roy-8142a4304" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} className="text-xl hover:text-gray-300" />
           </a>
@@ -55,17 +55,17 @@ export default function Footer() {
         {/* <Link href="https://google.com" passHref>
           <FontAwesomeIcon icon={faTwitter} className="text-xl hover:text-gray-300" />
         </Link> */}
-        <Link href="https://www.instagram.com/atoinfinityhub" passHref>
+        <Link href="https://www.instagram.com/atoinfinityhub" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="text-xl hover:text-gray-300" />
           </a>
         </Link>
-        <Link href="https://www.youtube.com/@AtoInfinityHub" passHref>
+        <Link href="https://www.youtube.com/@AtoInfinityHub" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-300" />
           </a>
         </Link>
-        <Link href="https://www.facebook.com/profile.php?id=61573723375270" passHref>
+        <Link href="https://www.facebook.com/profile.php?id=61573723375270" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-300" />
           </a>
