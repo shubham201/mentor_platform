@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faInstagram, faYoutube, faFacebook} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faInstagram, faYoutube, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import Image from 'next/image';
 export default function Footer() {
   return (
@@ -48,19 +48,27 @@ export default function Footer() {
       {/* Social Media Icons */}
       <div className="mt-6 flex justify-center space-x-6">
         <Link href="https://www.linkedin.com/in/shalini-roy-8142a4304" passHref>
-          <FontAwesomeIcon icon={faLinkedin} className="text-xl hover:text-gray-300" />
+          <a target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} className="text-xl hover:text-gray-300" />
+          </a>
         </Link>
         {/* <Link href="https://google.com" passHref>
           <FontAwesomeIcon icon={faTwitter} className="text-xl hover:text-gray-300" />
         </Link> */}
         <Link href="https://www.instagram.com/atoinfinityhub" passHref>
-          <FontAwesomeIcon icon={faInstagram} className="text-xl hover:text-gray-300" />
+          <a target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} className="text-xl hover:text-gray-300" />
+          </a>
         </Link>
         <Link href="https://www.youtube.com/@AtoInfinityHub" passHref>
-          <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-300" />
+          <a target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faYoutube} className="text-xl hover:text-gray-300" />
+          </a>
         </Link>
         <Link href="https://www.facebook.com/profile.php?id=61573723375270" passHref>
-          <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-300" />
+          <a target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebook} className="text-xl hover:text-gray-300" />
+          </a>
         </Link>
       </div>
 
