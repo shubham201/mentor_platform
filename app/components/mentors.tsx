@@ -77,6 +77,29 @@ export default function Mentors() {
             Connect on LinkedIn
           </Link>
         </div>
+
+        <div className="w-[400px] flex flex-col items-center mt-16  bg-white p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+          <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-gray-300">
+            <Image
+              src="/static/adya_vats.png"
+              alt="mentor-Adya Vats"
+              width={150}
+              height={150}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="text-center mt-4 text-2xl font-bold text-gray-800">Adya Vats</div>
+          <div className="text-center mt-1 text-lg font-medium text-gray-600">
+            B.Com. Hons.
+          </div>
+          <Link
+            href="https://www.linkedin.com/"
+            target="_blank"
+            className="mt-3 px-4 py-2 text-center bg-[#facc15] rounded-md text-sm font-semibold shadow-md hover:bg-yellow-500 transition"
+          >
+            Connect on LinkedIn
+          </Link>
+        </div>
       </div>
 
       <div className="flex justify-center mt-6">
