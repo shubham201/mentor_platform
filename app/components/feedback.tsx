@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const feedbackData = [
   {
     content: "I've noticed a huge improvement in my math skills since I started taking classes with Shubham. He explains everything really well, and thanks to his help, I’m now faster and more accurate at solving problems, and my grades have improved too.",
-    name: "Dakshit",
+    name: "Dhhakshit, USA",
     title: "6th grade",
     rating: 5,
     image: "feedback1.jpeg",
@@ -18,7 +18,7 @@ const feedbackData = [
   },
   {
     content: "Ever since I started online classes with Shalini ma'am, I have improved so much in math and English! I solve math problems faster and write better stories with good grammar",
-    name: "Dhhanvin Aleti",
+    name: "Dhhanvin Aleti, USA",
     title: "4th grade",
     rating: 5,
     image: "feedback2.jpeg",
@@ -26,10 +26,18 @@ const feedbackData = [
   },
   {
     content: "Learning Social Sciences with Shalini Ma'am has been an amazing experience! History, Geography, and Polity used to feel overwhelming, but the way she explained concepts made everything so easy to understand. Highly recommended for anyone looking for a great tutor! 😊📚✨",
-    name: "Shresth Anand",
+    name: "Shresth Anand, Patna",
     title: "10th Grader",
     rating: 5,
     image: "shresth.png",
+    videoUrl: ""
+  },
+  {
+    content: "It is now almost 20 months that I have been associated with A to Infinity Hub and during this while I have noticed a significant growth in the overall development of my ward who is in grade 4. Miss Shalini has always been cooperative since day 1 and always clarifies all the concepts in easy manner. My son now shows keen interest in Maths and Science.",
+    name: "Kiaan's mom, Delhi",
+    title: "4th Grader",
+    rating: 5,
+    image: "kiaan_mom.jpg",
     videoUrl: ""
   }
 ];

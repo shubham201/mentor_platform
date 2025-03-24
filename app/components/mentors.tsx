@@ -21,7 +21,8 @@ export default function Mentors() {
           </div>
           <div className="text-center mt-4 text-2xl font-bold text-gray-800">Shalini Kumari</div>
           <div className="text-center mt-1 text-lg font-medium text-gray-600">
-            Postgradute, Delhi University
+            Postgradute, Delhi University <br/>
+            B. Ed. (2023-25), CTET Qualified
           </div>
           <Link
             href="https://www.linkedin.com/in/shalini-roy-8142a4304/"
