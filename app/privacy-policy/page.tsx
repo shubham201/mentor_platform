@@ -1,7 +1,5 @@
-import Link from "next/link";
 import Navbar from "../components/navbar";
 import Head from "next/head";
-import { FaBookOpen, FaChalkboardTeacher, FaLightbulb, FaUsers } from "react-icons/fa";
 
 export default function AboutUsPage() {
   return (
@@ -97,7 +95,7 @@ export default function AboutUsPage() {
           <h2 className="text-2xl font-semibold text-[#2d3748] mb-4">1. Information We Collect</h2>
           <p className="text-lg text-[#4a5568] mb-4">We collect personal information that you voluntarily provide to us when you use our services, such as:</p>
           <ul className="list-disc pl-8 text-lg text-[#4a5568] mb-6">
-            <li><strong>Personal Identification Information:</strong> Name, email address, phone number, child's grade level, subjects of interest, and any additional details you provide for tutoring purposes.</li>
+            <li><strong>Personal Identification Information:</strong> Name, email address, phone number, child&apos;s grade level, subjects of interest, and any additional details you provide for tutoring purposes.</li>
             <li><strong>Payment Information:</strong> Credit card details, billing address, and payment history (processed securely through third-party payment gateways).</li>
             <li><strong>Usage Data:</strong> Information about how you interact with our website, such as IP addresses, browser types, and time spent on the site, which helps us improve user experience.</li>
           </ul>
@@ -105,7 +103,7 @@ export default function AboutUsPage() {
           <h2 className="text-2xl font-semibold text-[#2d3748] mb-4">2. How We Use Your Information</h2>
           <ul className="list-disc pl-8 text-lg text-[#4a5568] mb-6">
             <li>To provide you with personalized tutoring services and manage your account.</li>
-            <li>To communicate with you about your child’s progress, upcoming sessions, and other relevant updates.</li>
+            <li>To communicate with you about your child&apos;s progress, upcoming sessions, and other relevant updates.</li>
             <li>To process payments and handle billing for our services.</li>
             <li>To improve and customize our website and services based on user feedback and behavior.</li>
             <li>To send promotional or informational emails related to new offerings, updates, or events (you may opt-out of these emails at any time).</li>
@@ -142,7 +140,7 @@ export default function AboutUsPage() {
             If you wish to exercise any of your rights, please contact us using the information provided below.
           </p>
 
-          <h2 className="text-2xl font-semibold text-[#2d3748] mb-4">7. Children’s Privacy</h2>
+          <h2 className="text-2xl font-semibold text-[#2d3748] mb-4">7. Children&apos;s Privacy</h2>
           <p className="text-lg text-[#4a5568] mb-6">
             Our services are intended for parents and guardians seeking tutoring for their children. We do not knowingly collect or solicit personal information from children under the age of 13. If you believe that we have collected information from a child under 13, please contact us immediately, and we will take steps to delete such information.
           </p>
