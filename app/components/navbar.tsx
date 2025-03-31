@@ -29,6 +29,7 @@ export default function Navbar() {
           <CoursesDropdown />
           {/* <Link href="/mentor" >Mentors</Link> */}
           <Link href="/fee-structure">Fee Structure</Link>
+          <div>Contact: +91 8789785275</div>
         </div>
 
         {/* Hamburger Menu for Mobile */}
